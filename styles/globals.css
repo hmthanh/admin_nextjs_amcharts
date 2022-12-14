@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box-right-containter {
+  /* width: 35vw; */
+  height: 40vh;
+}
+
+.box-left-containter {
+  /* width: 60vw; */
+  height: 40vh;
+}

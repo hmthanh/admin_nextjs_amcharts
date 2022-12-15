@@ -4,10 +4,66 @@
 
 .box-right-containter {
   /* width: 35vw; */
-  height: 40vh;
+  height: 42vh;
+  /* height: 100%; */
 }
 
 .box-left-containter {
   /* width: 60vw; */
-  height: 40vh;
+  height: 42vh;
+  /* height: 100%; */
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/segoeui-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/segoeui-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/segoeui-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/segoeui-semilight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+.icon-wrapper {
+  display: flex;
+  /**
+   * As in the above "Centered prmopt" example,
+   * we'll rotate the main axis so that the children
+   * are ordered vertically.
+   */
+  flex-direction: column;
+
+  /**
+   * Same thing here as before: group the children
+   * together in the center of their container.
+   */
+  justify-content: center;
+
+  /**
+   * Just like in the "Centered prmopt" example,
+   * align the children in the center, along the
+   * main axis.
+   */
+  align-items: center;
+  border-radius: 100%;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05), 0 2px 3px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.05);
 }

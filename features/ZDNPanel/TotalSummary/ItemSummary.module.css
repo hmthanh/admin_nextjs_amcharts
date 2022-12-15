@@ -1,0 +1,18 @@
+.item-value {
+  font-size: 1.25rem;
+  line-height: 1.375;
+}
+
+.ni {
+  display: inline-block;
+  font: normal normal normal 14px/1 NucleoIcons;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.leading-none {
+  line-height: 1;
+}
+

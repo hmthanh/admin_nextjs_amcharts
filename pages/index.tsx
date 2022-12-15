@@ -30,12 +30,12 @@ export default function Home() {
 
       <div className="dark dark:bg-slate-900">
         <div
-          id="carouselExampleIndicators"
+          id="carouselExampleIndicators"  
           className="carousel slide relative
     text-base antialiased font-normal text-left leading-default dark:bg-slate-950 dark:bg-slate-900 dark:text-white"
           data-bs-ride="carousel"
         >
-          <CarouselLeft />
+          {/* <CarouselLeft /> */}
           <div className="carousel-inner relative w-full overflow-hidden">
             <div className="carousel-item active relative float-left w-full">
               <div className="block w-full h-screen">
@@ -57,7 +57,7 @@ export default function Home() {
               </div>
             </div> */}
           </div>
-          <CarouselRight />
+          {/* <CarouselRight /> */}
         </div>
       </div>
     </div>

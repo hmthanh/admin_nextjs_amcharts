@@ -8,7 +8,6 @@ import { dataUsage } from "../faker";
 // import { getGradient } from "../../helper/utils";
 // import { dataUsage } from "./faker";
 
-
 export default function DataUsageChart() {
   const [dataUsageChart, setDataUsageChart] = useState({});
 
@@ -217,38 +216,12 @@ export default function DataUsageChart() {
 
   return (
     <div
-      className="p-6 box-left-containter bg-[#111c44]
-border-black/12.5 dark:bg-slate-850 dark:shadow-dark-xl shadow-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid  bg-clip-border"
+      className="p-6 box-left-containter bg-slate-850 bg-[#111c44]
+                border-black/12.5 dark:bg-slate-850 dark:shadow-dark-xl 
+                shadow-xl relative z-20 flex min-w-0 flex-col
+                break-words rounded-2xl border-0 border-solid"
     >
-      <TimeSeriesChart/>
-        {/* // data={{
-        //   labels,
-        //   datasets: [
-        //     {
-        //       label: "Bandwidth",
-        //       data: values,
-        //       borderWidth: 5,
-        //       borderColor: "#16BDE4",
-        //       fill: {
-        //         target: "origin",
-        //         above: function (context: any) {
-        //           const { ctx, chartArea } = context.chart;
-        //           return getGradient(ctx, chartArea, gradient, width, height);
-        //         }
-        //       }
-        //       // fill:"#3366CC",
-        //       // backgroundColor: "#d048b6",
-        //       // borderColor: "#d048b6",
-        //       // pointBackgroundColor: "#d048b6",
-        //       // pointBorderColor: "rgba(255,255,255,0)",
-        //       // pointHoverBackgroundColor: "#d048b6",
-        //     }
-        //   ]
-        // }}
-        // data={{ dataUsageChart }}
-        // options={options} */}
-      
-      {/* <TimeSeries/> */}
+      <TimeSeriesChart />
     </div>
   );
 }

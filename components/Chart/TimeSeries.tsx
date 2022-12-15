@@ -156,7 +156,7 @@ export const chartOptions: ChartOptions<"line"> = {
       display: true,
       text: "Thống kê dữ liệu sử dụng trong tháng",
       font: {
-        size: 20,
+        size: 16,
         family: "Segoe UI",
         weight: "600"
       },
@@ -356,7 +356,7 @@ export default function TimeSeries() {
         display: true,
         text: "Thống kê dữ liệu sử dụng trong tháng",
         font: {
-          size: 20,
+          size: 16,
           family: "Segoe UI",
           weight: "600"
         },

@@ -6,6 +6,7 @@ import AppByDC from "./AppByDC/AppByDC";
 import ServerByDC from "./ServerByDC";
 import EdgeSeverStatistic from "./EdgeSeverStatistic/ServerStatistic";
 import EdgeSeverUsage from "./EdgeSeverUsage/EdgeSeverUsage";
+import ZCDNLogo from "../Logo";
 // import StackedChart from "./StackedChart";
 // import TotalSummary from "./TotalSummary/TotalSummary";
 
@@ -15,11 +16,6 @@ import EdgeSeverUsage from "./EdgeSeverUsage/EdgeSeverUsage";
 // const PieChart = dynamic(() => import("../../components/Chart/PieChart"), {
 //   ssr: false
 // });
-
-// const DirectedTree = dynamic(() => import("../../components/Chart/DirectedTree"), {
-//   ssr: false
-// });
-
 const BandwidthChart = dynamic(() => import("./BandwidthChart/BandwidthChart"), {
   ssr: false
 });
@@ -47,36 +43,52 @@ const TotalSummary = dynamic(() => import("./TotalSummary/TotalSummary"), {
 //   ssr: false
 // });
 
-                  {/* <TimeSeries /> */}
-                  {/* <TimeSeriesChart /> */}
-                  {/* <DirectedTree/> */}
-                  {/* <GlobeMap/> */}
+{
+  /* <TimeSeries /> */
+}
+{
+  /* <TimeSeriesChart /> */
+}
+{
+  /* <DirectedTree/> */
+}
+{
+  /* <GlobeMap/> */
+}
 export default function ZDNPanel() {
   return (
-    <div className="block w-full h-screen dark">
-      {/* <!-- h-screen --> */}
-      <div className="w-full bg-slate-600 h-[15vh] flex">
-        <div className="flex-none">
-          <div className="zdn-logo bg-green-400 w-[250px] h-full justify-center text-center">
-            <div className="logo">ZDN Logo</div>
+    <div className="flex flex-col w-full h-screen dark">
+      {/* <!-- Header --> */}
+      <div className="flex flex-row w-full">
+        <div className="basic-1/4">
+          <div className="flex zdn-logo w-[250px] h-full align-text-bottom gap-2 p-2">
+            <div className="logo  flex justify-center align-middle flex-wrap content-center">
+              <ZCDNLogo />
+            </div>
+            <div className="flex flex-col align-middle justify-center h-full ">
+              <div className="logo text-xl font-bold">ZCDN Dashboard</div>
+              <div className="logo uppercase text-sm font-semibold">Zalo Control System</div>
+            </div>
           </div>
         </div>
-        <div className="flex-auto">
+        <div className="basic-3/4 flex-auto p-3">
           <TotalSummary />
         </div>
       </div>
-      {/* <!-- row --> */}
+      {/* <!-- Header --> */}
+
+      {/* <!-- Body --> */}
       <div className="grid grid-cols-4 w-full h-full">
-        <div className="col-span-1">
-          <div className="grid grid-rows gap-4 py-3 w-full">
-            <div className=" w-full">
+        <div className="col-span-1 h-full">
+          <div className="grid grid-rows gap-4 py-3 w-full h-full">
+            <div className=" w-full h-full">
               <PaddingBox>
                 <Card>
                   <ServerByDC />
                 </Card>
               </PaddingBox>
             </div>
-            <div className="w-full">
+            <div className="w-full h-full">
               <PaddingBox>
                 <Card>
                   <AppByDC />
@@ -85,16 +97,16 @@ export default function ZDNPanel() {
             </div>
           </div>
         </div>
-        <div className="col-span-2">
-          <div className="grid grid-rows gap-4 py-3 w-full">
-            <div className="w-full ">
+        <div className="col-span-2 h-full">
+          <div className="grid grid-rows gap-4 py-3 w-full h-full">
+            <div className="w-full h-full">
               <PaddingBox>
                 <Card>
                   <DataUsageChart />
                 </Card>
               </PaddingBox>
             </div>
-            <div className="w-full ">
+            <div className="w-full h-full">
               <PaddingBox>
                 <Card>
                   <BandwidthChart />
@@ -103,19 +115,19 @@ export default function ZDNPanel() {
             </div>
           </div>
         </div>
-        <div className="col-span-1">
-          <div className="grid grid-rows gap-4 py-3 w-full">
-            <div className=" w-full">
+        <div className="col-span-1 h-full">
+          <div className="grid grid-rows gap-4 py-3 w-full h-full">
+            <div className=" w-full h-full">
               <PaddingBox>
                 <Card>
-                  <EdgeSeverStatistic/>
+                  <EdgeSeverStatistic />
                 </Card>
               </PaddingBox>
             </div>
-            <div className="w-full">
+            <div className="w-full h-full">
               <PaddingBox>
                 <Card>
-                  <EdgeSeverUsage/>
+                  <EdgeSeverUsage />
                 </Card>
               </PaddingBox>
             </div>
@@ -154,13 +166,7 @@ export default function ZDNPanel() {
         </div>
       </div> --> */}
       </div>
-
-      {/* <!-- <Card>
-    <PieChart/>
-  </Card> -->
-  <!-- <Card>
-    <PieChart />
-  </Card/> --> */}
+      {/* <!-- Body --> */}
     </div>
   );
 }

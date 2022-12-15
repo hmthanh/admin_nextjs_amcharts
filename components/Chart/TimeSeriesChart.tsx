@@ -136,7 +136,7 @@ export default function TimeSeriesChart() {
         display: true,
         text: "Thống kê dữ liệu sử dụng trong tháng",
         font: {
-          size: 20,
+          size: 16,
           family: "Segoe UI",
           weight: "600"
         },

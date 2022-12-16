@@ -27,10 +27,10 @@ const customCanvasBackgroundColor = {
   }
 };
 ChartJS.register(
-  Colors,
   Title,
   Tooltip,
   Legend,
+  Colors,
   CategoryScale,
   LineElement,
   LinearScale,
@@ -39,7 +39,103 @@ ChartJS.register(
   customCanvasBackgroundColor
 );
 
-export const options = {};
+export const options = {
+  indexAxis: "y" as const,
+  elements: {
+    bar: {
+      borderWidth: 1
+    }
+  },
+  chartArea: {
+    backgroundColor: "#d346b1"
+  },
+  animation: {},
+  responsive: true,
+  plugins: {
+    // datalabels: {
+    //   anchor: "end",
+    //   align: "top",
+    //   formatter: Math.round,
+    //   font: {
+    //     weight: "bold"
+    //   }
+    // },
+    colors: {
+      enabled: true
+    },
+    legend: {
+      position: "bottom" as const,
+      align: "center" as const,
+      labels: {
+        font: {
+          size: 14,
+          family: "Segoe UI",
+          weight: "600"
+        },
+        color: "white"
+      }
+    },
+    title: {
+      display: true,
+      text: "Thống kê tấn công DDos trong ngày",
+      font: {
+        size: 16,
+        family: "Segoe UI",
+        weight: "600"
+      },
+      padding: {
+        bottom: 20
+      },
+      color: "white"
+    },
+    tooltip: {},
+    // ******************** END ZOOM ********************
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+      intersect: false,
+      mode: "index"
+    },
+    showLine: true,
+    scales: {
+      x: {
+        type: "time",
+        grid: {
+          display: true,
+          drawOnChartArea: true,
+          drawTicks: true,
+          borderDash: [5, 5],
+          color: "rgb(255 255 255 / 0.2)"
+        },
+        ticks: {
+          display: false,
+          // color: "red",
+          color: "white",
+          font: {
+            size: 14,
+            family: "Segoe UI",
+            lineHeight: 2
+          }
+        }
+      },
+      y: {
+        beginAtZero: false,
+        suggestedMin: 0,
+        grid: {
+          display: true
+          // color: "rgb(255 255 255 / 0.2)"
+        },
+        ticks: {
+          color: "white",
+          font: {
+            size: 14,
+            family: "Segoe UI"
+          }
+        }
+      }
+    }
+  }
+};
 
 const labels = ["January"];
 
@@ -80,108 +176,5 @@ export const data = {
 };
 
 export function StackBarChart() {
-  return (
-    <Bar
-      height={"100%"}
-      width={"100%"}
-      options={{
-        indexAxis: "y" as const,
-        elements: {
-          bar: {
-            borderWidth: 1
-          }
-        },
-        chartArea: {
-          backgroundColor: "#d346b1"
-        },
-        animation: {},
-        responsive: true,
-        plugins: {
-          // datalabels: {
-          //   anchor: "end",
-          //   align: "top",
-          //   formatter: Math.round,
-          //   font: {
-          //     weight: "bold"
-          //   }
-          // },
-          colors: {
-            enabled: true
-          },
-          legend: {
-            position: "bottom" as const,
-            align: "center" as const,
-            labels: {
-              font: {
-                size: 14,
-                family: "Segoe UI",
-                weight: "600"
-              },
-              color: "white"
-            }
-          },
-          title: {
-            display: true,
-            text: "Thống kê tấn công DDos trong ngày",
-            font: {
-              size: 16,
-              family: "Segoe UI",
-              weight: "600"
-            },
-            padding: {
-              bottom: 20
-            },
-            color: "white"
-          },
-          tooltip: {},
-          // ******************** END ZOOM ********************
-          responsive: true,
-          maintainAspectRatio: false,
-          interaction: {
-            intersect: false,
-            mode: "index"
-          },
-          showLine: true,
-          scales: {
-            x: {
-              type: "time",
-              grid: {
-                display: true,
-                drawOnChartArea: true,
-                drawTicks: true,
-                borderDash: [5, 5],
-                color: "rgb(255 255 255 / 0.2)"
-              },
-              ticks: {
-                display: false,
-                // color: "red",
-                color: "white",
-                font: {
-                  size: 14,
-                  family: "Segoe UI",
-                  lineHeight: 2
-                }
-              }
-            },
-            y: {
-              grid: {
-                display: true
-                // color: "rgb(255 255 255 / 0.2)"
-              },
-              beginAtZero: false,
-              suggestedMin: 0,
-              ticks: {
-                color: "white",
-                font: {
-                  size: 14,
-                  family: "Segoe UI"
-                }
-              }
-            }
-          }
-        }
-      }}
-      data={data}
-    />
-  );
+  return <Bar height={"100%"} width={"100%"} options={options} data={data} />;
 }

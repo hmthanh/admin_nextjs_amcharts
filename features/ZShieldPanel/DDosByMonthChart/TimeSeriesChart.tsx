@@ -33,20 +33,7 @@ const customCanvasBackgroundColor = {
   }
 };
 
-ChartJS.register(
-  Colors,
-  Title,
-  Tooltip,
-  Legend,
-  TimeSeriesScale,
-  LineElement,
-  LinearScale,
-  PointElement,
-  CategoryScale,
-  Filler,
-  zoomPlugin,
-  customCanvasBackgroundColor
-);
+ChartJS.register(Title, Tooltip, Legend, TimeSeriesScale, LineElement, LinearScale, PointElement, CategoryScale);
 
 export default function TimeSeriesChart() {
   const chartRef = useRef(null);
@@ -230,6 +217,7 @@ export default function TimeSeriesChart() {
           { label: "zingnews.vn", data: [8, 92, 3, 6, 8, 19, 18, 24, 11, 21, 9] }
         ]
       }}
+      plugins={[Colors as any, Filler, zoomPlugin, customCanvasBackgroundColor]}
     />
   );
 }

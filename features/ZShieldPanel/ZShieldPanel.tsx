@@ -3,12 +3,13 @@ import Card from "../../components/Card/Card";
 import PaddingBox from "../../components/PaddingBox";
 import ZCDNLogo from "../Logo";
 import TotalSummary from "../ZDNPanel/TotalSummary/TotalSummary";
+import AlertPanel from "./AlertPanel/AlertPanel";
 
-const BarChart = dynamic(() => import("../../components/Chart/BarChart"), {
+const GlobeMap = dynamic(() => import("../../components/Globe/GlobeMap"), {
   ssr: false
 });
 
-const GlobeChart = dynamic(() => import("../../components/Globe/GlobeMap"), {
+const BarChart = dynamic(() => import("../../components/Chart/BarChart"), {
   ssr: false
 });
 
@@ -41,7 +42,7 @@ export default function ZShieldPanel() {
         </div>
       </div>
       {/* <!-- Header --> */}
-
+      {/* <GlobeMap /> */}
       {/* <!-- h-screen --> */}
       <div className="grid grid-cols-4 gap-4 px-4 pb-4 w-full h-full">
         {/* <!-- ROW 1--> */}
@@ -58,20 +59,16 @@ export default function ZShieldPanel() {
         </div>
 
         {/* <!-- ROW 2 --> */}
-        <div className="col-span-2 bg-yellow-500">
-          <div className=" max-w-fit mx-auto my-auto flex justify-center items-center m-height">
-            <PaddingBox>
-              <Card>
-                {/* <GlobeChart /> */}
-                </Card>
-            </PaddingBox>
+        <div className="col-span-2 ">
+          <div className="flex content-center h-full">
+              <GlobeMap />
           </div>
         </div>
 
         {/* <!-- ROW 3 --> */}
-        <div className="col-span-1 bg-blue-500">
-          <div className="max-w-fit max-h-screen mx-auto justify-center items-center">
-            <Card></Card>
+        <div className="col-span-1 ">
+          <div className="w-full h-full">
+            <AlertPanel/>
           </div>
         </div>
       </div>

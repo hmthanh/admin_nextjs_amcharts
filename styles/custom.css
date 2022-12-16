@@ -1,0 +1,497 @@
+.chat-content {
+  margin: 0 0 0 10px;
+  max-width: calc(100% - 30px);
+}
+
+#calendar-v3 .cal-weekday-v3,
+#filter-tags-sb .filter-tag-item > .edit-button,
+#group-creator .create-group__counter,
+#group-creator .create-group__item__link-icon,
+#group-creator .create-group__nav,
+#group-creator .create-group__selected-title,
+#groupNameInput--change,
+#searchResultList .global-search-no-result__sub-text-wrapper,
+#ztoolbar.chat-input-v2,
+#ztoolbar.chat-input-v2 .drop-ico,
+.app-info__desc__line,
+.assignee-preview-item__remain,
+.block-icon,
+.bubble-contact-card-container > .bubble-contact-card > .content,
+.bubble-contact-card-container > .bubble-contact-card > .content > .qr-code,
+.bubble-contact-card-container > .bubble-contact-card > .content > .qr-code > .qr__photo.qr--invalid,
+.bubble-contact-card-container > .bubble-contact-card > .content > .user-info-wrapper.off--qr-code,
+.bubble-contact-card-container > .bubble-contact-card > .content > .user-info-wrapper > .user-info.off--qr-code,
+.bubble-contact-card-container > .bubble-contact-card > .content > .user-info-wrapper > .user-info > .user-name-wrapper,
+.bubble-contact-card-container > .bubble-contact-card > .footer,
+.bubble-contact-card-container > .bubble-contact-card > .footer > div,
+.cal-date-time,
+.cal-time-section,
+.cal-time-title,
+.cal-weekday,
+.call-msg__callback,
+.cap-ico,
+.card,
+.card-content,
+.cb-info-file-item__thumb-container,
+.chat-box-member__info.v2,
+.chat-group-topic__board-details .title-container,
+.chat-group-topic__board-details .view-all-board-container,
+.chat-group-topic__board-details .view-all-board-container > .view-all-board-content,
+.chat-group-topic__board-details .view-all-board-container > .view-all-board-content > .view-all-board-icon-content,
+.chat-group-topic__item,
+.chat-group-topic__item .icon-container,
+.chat-group-topic__item .info-container,
+.chat-group-topic__item .info-container > .content-container,
+.chat-group-topic__item .info-container > .content-container > .content-message-container,
+.chat-group-topic__item
+  .info-container
+  > .content-container
+  > .content-message-container
+  > .content-message-dot-separator,
+.chat-group-topic__item .info-container > .content-container > .content-message-container > .content-message-info,
+.chat-group-topic__item .info-container > .content-container > .content-message-container > .content-message-name,
+.chat-group-topic__item
+  .info-container
+  > .content-container
+  > .content-message-container
+  > .content-message-thumb-preview,
+.chat-group-topic__item .info-container > .content-container > .content-message-container > .content-message-type,
+.chat-group-topic__item .info-container > .right-action-container,
+.chat-group-topic__item .info-container > .right-action-container > .change-actions,
+.chat-group-topic__item .info-container > .right-action-container > .show-details-container,
+.chat-group-topic__item .info-container > .right-action-container > .show-details-container > .show-details-btn,
+.chat-group-topic__item .info-container > .right-action-container > .time-region-container > .more-action-container,
+.chat-group-topic__item .info-container > .right-action-container > .time-region-container > .timer-container,
+.chat-group-topic__item
+  .info-container
+  > .right-action-container
+  > .time-region-container
+  > .timer-container
+  > .timer-reminder,
+.chat-info-general__action__item,
+.chat-input-btns,
+.chat-input__content,
+.chips,
+.chips > .html,
+.chips > img,
+.composer-container,
+.composer-container > .main,
+.composer-container > .main > .counter,
+.composer-container > .main > .plain-text-wrapper,
+.composer-container > .main > .rtf-wrapper,
+.composer-container > .main > .tool-wrapper,
+.composer-container > .main > .tool-wrapper > .tool.normal,
+.composer-container > .main > .tool-wrapper > .tool.rtf,
+.conv-action__menu,
+.conv-action__popup,
+.conv-item-padding,
+.conv-item:hover .conv-action__menu,
+.conv-item:hover .conv-action__popup,
+.conv-list-empty-wrapper > .image-wrapper,
+.dd-options,
+.drag-over-message-view,
+.drag-over-overlay.dragstart:not(.drag-over-message-view),
+.drag-over-overlay.dragstart:not(.drag-over-message-view).chatinputboxv2,
+.entry-content-v2,
+.file-actions-row,
+.file-banner-content,
+.file-banner-content__thumb-container,
+.file-layout,
+.file-layout__bot-container,
+.file-layout__right-container,
+.file-layout__thumb-container,
+.file-layout__top-container,
+.file-progress-row,
+.file-star-msg-content,
+.file-star-msg-content__right-block,
+.file-suggest-item,
+.file-suggest-item__left-container,
+.file-suggest-item__right-container,
+.filter-color-item,
+.flx,
+.flx-centralized,
+.fmsg-send-time,
+.group-poll-vote-content-item,
+.group-poll-vote-content__info-creator,
+.group-setting,
+.header-title-container,
+.item-setting,
+.item-setting-action,
+.lb-more-menu,
+.lbl-conv-item,
+.link-preview-v2,
+.mg-item,
+.modal,
+.more-path-icon,
+.noti-filter-menu-item > .desc-wrap,
+.noti-item-padding,
+.otp-error-message,
+.otp-resend-container,
+.phone-input,
+.phone-iso-picker,
+.photo-sticker__container,
+.pr-status-content,
+.preview-contact-wrapper .preview-contact,
+.preview-contact-wrapper .preview-contact > .user-preview,
+.profile-update .display-name__error,
+.profile-update .display-name__hint,
+.qm-empty-hint,
+.qm-empty-hint__img,
+.qm-empty-hint__txt,
+.qm-mrc,
+.qr-icon,
+.qr-red-dot--c-input-outer,
+.qr-s-di-tut,
+.qr-s-di-tut__light-bulb,
+.qrcb-popover-container__body__hint-c__tip,
+.qri__left > .qri__message,
+.qrw__extension > i,
+.rl-msg,
+.rl-msg .rl-msg-content,
+.search-header,
+.search-header-c,
+.search-result-empty__image-wrapper,
+.search-result-empty__result-wrapper,
+.search-result-empty__sub-text-wrapper,
+.search-result-file__file-name,
+.search-result-file__thumb-container,
+.search-year-sep,
+.share-message__thumb,
+.snippet,
+.star-msgs__group__item__title,
+.stressed-test-modal .config-container,
+.stressed-test-modal .config-key-container,
+.stressed-test-modal .indicator-container,
+.stressed-test-modal .path-dir,
+.stressed-test-modal .section,
+.tab-content,
+.tabs-container .tabs-main .tab-container,
+.tds-banner-download__container,
+.tds-banner-download__content-wrapper,
+.tds-banner-download__icon-wrapper,
+.tds-bubble-info-ecard__icon-wrapper,
+.tds-modal__backdrop-wrapper,
+.tds-modal__cancellation-button-wrapper,
+.tds-modal__description-wrapper,
+.tds-modal__suggestion-wrapper,
+.tds-modal__synchronization-button-wrapper,
+.tds-modal__title-wrapper,
+.titlebar__btns,
+.todo-welcome,
+.z-checkbox,
+.z-radio,
+.z-toggle,
+.z-upgrade-onboard__top_block,
+.z-upgrade-success__top_block,
+.zdd-select-all-section,
+.zl-dropdown--preview-item,
+.zl-label-add-more,
+.zl-lbl-component,
+.zl-modal,
+.zl-slider__container,
+.zmenu-item > .menu-icon,
+article,
+header,
+i.btn.titlebar__menu__btn,
+i.btn.titlebar__menu__btnPreviewPhoto {
+  display: flex;
+}
+
+.conv-item-title__name,
+.conv-message,
+.conv-title-name,
+.flx-cell,
+.item-message,
+.item-title-name,
+.zl-scroll {
+  flex: 1 1 auto;
+}
+
+.bubble-contact-card-container > .bubble-contact-card > .content > .qr-code,
+.bubble-contact-card-container > .bubble-contact-card > .content > .user-info-wrapper,
+.bubble-contact-card-container > .bubble-contact-card > .content > .user-info-wrapper > .user-info.off--qr-code,
+.cal-time-title,
+.cal-weekday,
+.card-content,
+.chat-input__content,
+.composer-container,
+.composer-container > .main,
+.composer-container > .main > .plain-text-wrapper,
+.composer-container > .main > .rtf-wrapper,
+.drag-over-message-view,
+.drag-over-overlay.chatinputboxv2,
+.drag-over-overlay.dragstart:not(.drag-over-message-view),
+.drag-over-overlay.dragstart:not(.drag-over-message-view).chatinputboxv2,
+.file-layout__right-container,
+.file-star-msg-content__right-block,
+.file-suggest-item__right-container,
+.flx-col,
+.modal,
+.preview-contact-wrapper .preview-contact > .user-preview,
+.search-year-sep,
+.snippet,
+.tab-content,
+.zl-lbl-component,
+.zl-modal,
+article {
+  flex-flow: column nowrap;
+}
+
+#calendar-v3 .cal-weekday-v3,
+#filter-tags-sb .filter-tag-item > .edit-button,
+#group-creator .create-group__counter,
+#group-creator .create-group__item__link-icon,
+#group-creator .create-group__nav,
+#group-creator .create-group__selected-title,
+#groupNameInput--change,
+#searchResultList .global-search-no-result__sub-text-wrapper,
+#ztoolbar.chat-input-v2,
+#ztoolbar.chat-input-v2 .drop-ico,
+.app-info__desc__line,
+.assignee-preview-item__remain,
+.block-icon,
+.bubble-contact-card-container > .bubble-contact-card > .content,
+.bubble-contact-card-container > .bubble-contact-card > .content > .qr-code,
+.bubble-contact-card-container > .bubble-contact-card > .content > .qr-code > .qr__photo.qr--invalid,
+.bubble-contact-card-container > .bubble-contact-card > .content > .user-info-wrapper.off--qr-code,
+.bubble-contact-card-container > .bubble-contact-card > .content > .user-info-wrapper > .user-info.off--qr-code,
+.bubble-contact-card-container > .bubble-contact-card > .content > .user-info-wrapper > .user-info > .user-name-wrapper,
+.bubble-contact-card-container > .bubble-contact-card > .footer,
+.bubble-contact-card-container > .bubble-contact-card > .footer > div,
+.cal-date-time,
+.cal-time-section,
+.cal-time-title,
+.cal-weekday,
+.call-msg__callback,
+.cap-ico,
+.card,
+.card-content,
+.cb-info-file-item__thumb-container,
+.chat-box-member__info.v2,
+.chat-group-topic__board-details .title-container,
+.chat-group-topic__board-details .view-all-board-container,
+.chat-group-topic__board-details .view-all-board-container > .view-all-board-content,
+.chat-group-topic__board-details .view-all-board-container > .view-all-board-content > .view-all-board-icon-content,
+.chat-group-topic__item,
+.chat-group-topic__item .icon-container,
+.chat-group-topic__item .info-container,
+.chat-group-topic__item .info-container > .content-container,
+.chat-group-topic__item .info-container > .content-container > .content-message-container,
+.chat-group-topic__item
+  .info-container
+  > .content-container
+  > .content-message-container
+  > .content-message-dot-separator,
+.chat-group-topic__item .info-container > .content-container > .content-message-container > .content-message-info,
+.chat-group-topic__item .info-container > .content-container > .content-message-container > .content-message-name,
+.chat-group-topic__item
+  .info-container
+  > .content-container
+  > .content-message-container
+  > .content-message-thumb-preview,
+.chat-group-topic__item .info-container > .content-container > .content-message-container > .content-message-type,
+.chat-group-topic__item .info-container > .right-action-container,
+.chat-group-topic__item .info-container > .right-action-container > .change-actions,
+.chat-group-topic__item .info-container > .right-action-container > .show-details-container,
+.chat-group-topic__item .info-container > .right-action-container > .show-details-container > .show-details-btn,
+.chat-group-topic__item .info-container > .right-action-container > .time-region-container > .more-action-container,
+.chat-group-topic__item .info-container > .right-action-container > .time-region-container > .timer-container,
+.chat-group-topic__item
+  .info-container
+  > .right-action-container
+  > .time-region-container
+  > .timer-container
+  > .timer-reminder,
+.chat-info-general__action__item,
+.chat-input-btns,
+.chat-input__content,
+.chips,
+.chips > .html,
+.chips > img,
+.composer-container,
+.composer-container > .main,
+.composer-container > .main > .counter,
+.composer-container > .main > .plain-text-wrapper,
+.composer-container > .main > .rtf-wrapper,
+.composer-container > .main > .tool-wrapper,
+.composer-container > .main > .tool-wrapper > .tool.normal,
+.composer-container > .main > .tool-wrapper > .tool.rtf,
+.conv-action__menu,
+.conv-action__popup,
+.conv-item-padding,
+.conv-item:hover .conv-action__menu,
+.conv-item:hover .conv-action__popup,
+.conv-list-empty-wrapper > .image-wrapper,
+.dd-options,
+.drag-over-message-view,
+.drag-over-overlay.dragstart:not(.drag-over-message-view),
+.drag-over-overlay.dragstart:not(.drag-over-message-view).chatinputboxv2,
+.entry-content-v2,
+.file-actions-row,
+.file-banner-content,
+.file-banner-content__thumb-container,
+.file-layout,
+.file-layout__bot-container,
+.file-layout__right-container,
+.file-layout__thumb-container,
+.file-layout__top-container,
+.file-progress-row,
+.file-star-msg-content,
+.file-star-msg-content__right-block,
+.file-suggest-item,
+.file-suggest-item__left-container,
+.file-suggest-item__right-container,
+.filter-color-item,
+.flx,
+.flx-centralized,
+.fmsg-send-time,
+.group-poll-vote-content-item,
+.group-poll-vote-content__info-creator,
+.group-setting,
+.header-title-container,
+.item-setting,
+.item-setting-action,
+.lb-more-menu,
+.lbl-conv-item,
+.link-preview-v2,
+.mg-item,
+.modal,
+.more-path-icon,
+.noti-filter-menu-item > .desc-wrap,
+.noti-item-padding,
+.otp-error-message,
+.otp-resend-container,
+.phone-input,
+.phone-iso-picker,
+.photo-sticker__container,
+.pr-status-content,
+.preview-contact-wrapper .preview-contact,
+.preview-contact-wrapper .preview-contact > .user-preview,
+.profile-update .display-name__error,
+.profile-update .display-name__hint,
+.qm-empty-hint,
+.qm-empty-hint__img,
+.qm-empty-hint__txt,
+.qm-mrc,
+.qr-icon,
+.qr-red-dot--c-input-outer,
+.qr-s-di-tut,
+.qr-s-di-tut__light-bulb,
+.qrcb-popover-container__body__hint-c__tip,
+.qri__left > .qri__message,
+.qrw__extension > i,
+.rl-msg,
+.rl-msg .rl-msg-content,
+.search-header,
+.search-header-c,
+.search-result-empty__image-wrapper,
+.search-result-empty__result-wrapper,
+.search-result-empty__sub-text-wrapper,
+.search-result-file__file-name,
+.search-result-file__thumb-container,
+.search-year-sep,
+.share-message__thumb,
+.snippet,
+.star-msgs__group__item__title,
+.stressed-test-modal .config-container,
+.stressed-test-modal .config-key-container,
+.stressed-test-modal .indicator-container,
+.stressed-test-modal .path-dir,
+.stressed-test-modal .section,
+.tab-content,
+.tabs-container .tabs-main .tab-container,
+.tds-banner-download__container,
+.tds-banner-download__content-wrapper,
+.tds-banner-download__icon-wrapper,
+.tds-bubble-info-ecard__icon-wrapper,
+.tds-modal__backdrop-wrapper,
+.tds-modal__cancellation-button-wrapper,
+.tds-modal__description-wrapper,
+.tds-modal__suggestion-wrapper,
+.tds-modal__synchronization-button-wrapper,
+.tds-modal__title-wrapper,
+.titlebar__btns,
+.todo-welcome,
+.z-checkbox,
+.z-radio,
+.z-toggle,
+.z-upgrade-onboard__top_block,
+.z-upgrade-success__top_block,
+.zdd-select-all-section,
+.zl-dropdown--preview-item,
+.zl-label-add-more,
+.zl-lbl-component,
+.zl-modal,
+.zl-slider__container,
+.zmenu-item > .menu-icon,
+article,
+header,
+i.btn.titlebar__menu__btn,
+i.btn.titlebar__menu__btnPreviewPhoto {
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+}
+
+.chat-message {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  color: var(--text-primary);
+}
+
+.chat-message.wrap-message:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 0 100px;
+  right: -100px;
+}
+
+.card.card--text:not(.me) {
+  background-color: var(--white-message);
+}
+
+.card.card--text {
+  user-select: text;
+  min-width: 32px;
+  max-width: calc(100% - 38px);
+}
+
+.chat-message__actionholder {
+  contain: strict;
+  pointer-events: none;
+  min-height: 28px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+
+
+
+.card.card--file, .card.card--link, .card.card--location, .card.card--sound, .card.card--text, .card.card--undo, .shadow-bubble {
+    -webkit-box-shadow: 0 1px 2px var(--BA20);
+    -moz-box-shadow: 0 1px 2px var(--BA20);
+    box-shadow: 0 1px 2px var(--BA20);
+}
+
+.card {
+    position: relative;
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    background: var(--WA100);
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.card, .card-content, .cb-info-file-item__thumb-container, .chat-box-member__info.v2, .chat-group-topic__board-details .title-container, .chat-group-topic__board-details .view-all-board-container, .chat-group-topic__board-details .view-all-board-container>.view-all-board-content, .chat-group-topic__board-details .view-all-board-container>.view-all-board-content>.view-all-board-icon-content, .chat-group-topic__item, .chat-group-topic__item .icon-container, .chat-group-topic__item .info-container, .chat-group-topic__item .info-container>.content-container, .chat-group-topic__item .info-container>.content-container>.content-message-container, .chat-group-topic__item .info-container>.content-container>.content-message-container>.content-message-dot-separator, .chat-group-topic__item .info-container>.content-container>.content-message-container>.content-message-info, .chat-group-topic__item .info-container>.content-container>.content-message-container>.content-message-name, .chat-group-topic__item .info-container>.content-container>.content-message-container>.content-message-thumb-preview, .chat-group-topic__item .info-container>.content-container>.content-message-container>.content-message-type, .chat-group-topic__item .info-container>.right-action-container, .chat-group-topic__item .info-container>.right-action-container>.change-actions, .chat-group-topic__item .info-container>.right-action-container>.show-details-container, .chat-group-topic__item .info-container>.right-action-container>.show-details-container>.show-details-btn, .chat-group-topic__item .info-container>.right-action-container>.time-region-container>.more-action-container, .chat-group-topic__item .info-container>.right-action-container>.time-region-container>.timer-container, .chat-group-topic__item .info-container>.right-action-container>.time-region-container>.timer-container>.timer-reminder, .chat-info-general__action__item, .chat-input-btns, .chat-input__content, .chips, .chips>.html, .chips>img, .composer-container, .composer-container>.main, .composer-container>.main>.counter, .composer-container>.main>.plain-text-wrapper, .composer-container>.main>.rtf-wrapper, .composer-container>.main>.tool-wrapper, .composer-container>.main>.tool-wrapper>.tool.normal, .composer-container>.main>.tool-wrapper>.tool.rtf, .conv-action__menu, .conv-action__popup, .conv-item-padding, .conv-item:hover .conv-action__menu, .conv-item:hover .conv-action__popup, .conv-list-empty-wrapper>.image-wrapper, .dd-options, .drag-over-message-view, .drag-over-overlay.dragstart:not(.drag-over-message-view), .drag-over-overlay.dragstart:not(.drag-over-message-view).chatinputboxv2, .entry-content-v2, .file-actions-row, .file-banner-content, .file-banner-content__thumb-container, .file-layout, .file-layout__bot-container, .file-layout__right-container, .file-layout__thumb-container, .file-layout__top-container, .file-progress-row, .file-star-msg-content, .file-star-msg-content__right-block, .file-suggest-item, .file-suggest-item__left-container, .file-suggest-item__right-container, .filter-color-item, .flx, .flx-centralized, .fmsg-send-time, .group-poll-vote-content-item, .group-poll-vote-content__info-creator, .group-setting, .header-title-container, .item-setting, .item-setting-action, .lb-more-menu, .lbl-conv-item, .link-preview-v2, .mg-item, .modal, .more-path-icon, .noti-filter-menu-item>.desc-wrap, .noti-item-padding, .otp-error-message, .otp-resend-container, .phone-input, .phone-iso-picker, .photo-sticker__container, .pr-status-content, .preview-contact-wrapper .preview-contact, .preview-contact-wrapper .preview-contact>.user-preview, .profile-update .display-name__error, .profile-update .display-name__hint, .qm-empty-hint, .qm-empty-hint__img, .qm-empty-hint__txt, .qm-mrc, .qr-icon, .qr-red-dot--c-input-outer, .qr-s-di-tut, .qr-s-di-tut__light-bulb, .qrcb-popover-container__body__hint-c__tip, .qri__left>.qri__message, .qrw__extension>i, .rl-msg, .rl-msg .rl-msg-content, .search-header, .search-header-c, .search-result-empty__image-wrapper, .search-result-empty__result-wrapper, .search-result-empty__sub-text-wrapper, .search-result-file__file-name, .search-result-file__thumb-container, .search-year-sep, .share-message__thumb, .snippet, .star-msgs__group__item__title, .stressed-test-modal .config-container, .stressed-test-modal .config-key-container, .stressed-test-modal .indicator-container, .stressed-test-modal .path-dir, .stressed-test-modal .section, .tab-content, .tabs-container .tabs-main .tab-container, .tds-banner-download__container, .tds-banner-download__content-wrapper, .tds-banner-download__icon-wrapper, .tds-bubble-info-ecard__icon-wrapper, .tds-modal__backdrop-wrapper, .tds-modal__cancellation-button-wrapper, .tds-modal__description-wrapper, .tds-modal__suggestion-wrapper, .tds-modal__synchronization-button-wrapper, .tds-modal__title-wrapper, .titlebar__btns, .todo-welcome, .z-checkbox, .z-radio, .z-toggle, .z-upgrade-onboard__top_block, .z-upgrade-success__top_block, .zdd-select-all-section, .zl-dropdown--preview-item, .zl-label-add-more, .zl-lbl-component, .zl-modal, .zl-slider__container, .zmenu-item>.menu-icon, article, header, i.btn.titlebar__menu__btn, i.btn.titlebar__menu__btnPreviewPhoto {
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+}
+

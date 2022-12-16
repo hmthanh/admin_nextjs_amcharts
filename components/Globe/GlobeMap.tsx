@@ -346,7 +346,7 @@ export default function GlobeMap() {
       key: "rotationX",
       from: 0,
       to: 360,
-      duration: 10000,
+      duration: 30000,
       loops: Infinity
     });
 
@@ -669,5 +669,17 @@ export default function GlobeMap() {
     };
   }, []);
 
-  return <div id="GlobeMap" style={{ width: "100%", height: "500px" }}></div>;
+  return (
+    <div className="w-full h-full flex justify-center align-middle items-center ">
+      <div
+        id="GlobeMap"
+        style={{
+          width: "100%",
+          // width: "600px",
+          height: "650px",
+          zIndex: 99999
+        }}
+      />
+    </div>
+  );
 }

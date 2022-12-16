@@ -19,3 +19,14 @@ export interface IUsageDataType {
   msg: string;
   data: any[];
 }
+
+export interface IDDosSeriesType{
+  timestamp: number;
+  value:number;
+}
+
+export interface IDDosByMonthType {
+  error: number;
+  msg: string;
+  data: IDDosSeriesType[];
+}

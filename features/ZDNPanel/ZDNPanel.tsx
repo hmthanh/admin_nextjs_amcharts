@@ -133,38 +133,6 @@ export default function ZDNPanel() {
             </div>
           </div>
         </div>
-        {/* <!-- <div className="col-span-2  h-[50vh]">
-        <div className="max-w-fit max-h-screen mx-auto justify-center items-center w-full h-full">
-          <Card>
-            <DataUsageChart />
-          </Card>
-        </div>
-      </div>
-      <div className=" h-[50vh]">
-        <div
-          className=" max-w-fit mx-auto my-auto flex justify-center items-center"
-        >
-          <Card>
-            <PieChart />
-            <ServerStats />
-          </Card>
-        </div>
-      </div> --> */}
-        {/* <!-- row -->
-    <!-- <div className="col-span-2  h-[50vh]">
-        <div className="max-w-fit max-h-screen mx-auto justify-center items-center w-full h-full">
-          <Card>
-            <BandwidthChart />
-          </Card>
-        </div>
-      </div>
-      <div className=" h-[50vh]">
-        <div className="max-w-fit max-h-screen mx-auto justify-center items-center w-full h-full">
-          <Card>
-            <StackedChart />
-          </Card>
-        </div>
-      </div> --> */}
       </div>
       {/* <!-- Body --> */}
     </div>

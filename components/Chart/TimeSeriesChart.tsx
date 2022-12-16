@@ -38,8 +38,8 @@ const customCanvasBackgroundColor = {
   }
 };
 
-ChartJS.register(
-  Colors,
+ ChartJS.register(
+  Colors as any,
   Title,
   Tooltip,
   Legend,

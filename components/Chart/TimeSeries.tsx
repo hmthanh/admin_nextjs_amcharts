@@ -37,7 +37,7 @@ const customCanvasBackgroundColor = {
 };
 
 ChartJS.register(
-  Colors,
+  Colors as any,
   Title,
   Tooltip,
   Legend,

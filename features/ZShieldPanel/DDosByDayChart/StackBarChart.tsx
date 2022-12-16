@@ -30,7 +30,7 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  Colors,
+  Colors as any,
   CategoryScale,
   LineElement,
   LinearScale,

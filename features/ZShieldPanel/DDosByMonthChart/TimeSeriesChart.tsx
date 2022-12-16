@@ -33,7 +33,16 @@ const customCanvasBackgroundColor = {
   }
 };
 
-ChartJS.register(Title, Tooltip, Legend, TimeSeriesScale, LineElement, LinearScale, PointElement, CategoryScale);
+ChartJS.register(
+  Title,
+  Tooltip,
+  Legend,
+  TimeSeriesScale,
+  LineElement,
+  LinearScale,
+  PointElement,
+  CategoryScale
+);
 
 export default function TimeSeriesChart() {
   const chartRef = useRef(null);

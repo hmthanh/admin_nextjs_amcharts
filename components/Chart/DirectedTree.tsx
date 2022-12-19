@@ -115,5 +115,5 @@ export default function DirectedTree() {
     return () => root.dispose();
   }, []);
 
-  return <div id="DirectedTree" style={{ width: "100%", height: "500px" }}></div>;
+  return <div id="DirectedTree" style={{ width: "100%", height: "100%" }}></div>;
 }

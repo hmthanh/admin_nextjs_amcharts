@@ -1,8 +1,8 @@
 import * as am5 from "@amcharts/amcharts5";
 // import * as am5map from "@amcharts/amcharts5/map";
-import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
-import * as am5hierarchy from "@amcharts/amcharts5/hierarchy";
+import am5themes_Responsive from '@amcharts/amcharts5/themes/Responsive';
+import * as am5xy from "@amcharts/amcharts5/xy";
 import { useLayoutEffect } from "react";
 
 export default function StackedVerticalColumnChart() {
@@ -15,7 +15,7 @@ export default function StackedVerticalColumnChart() {
     customTheme.rule("Label").set("fontSize", 12);
     customTheme.rule("Label").set("fill", am5.color("#FFFFFF"));
 
-    root.setThemes([am5themes_Animated.new(root), customTheme]);
+    root.setThemes([am5themes_Animated.new(root), customTheme, am5themes_Responsive.new(root)]);
 
     // Create chart
     // https://www.amcharts.com/docs/v5/charts/xy-chart/
@@ -155,5 +155,5 @@ export default function StackedVerticalColumnChart() {
     };
   }, []);
 
-  return <div id="StackedVerticalColumnChart" style={{ width: "100%", height: "500px" }}></div>;
+  return <div id="StackedVerticalColumnChart" style={{ width: "100%", height: "100%" }}></div>;
 }

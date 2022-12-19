@@ -258,6 +258,8 @@ export default function TimeSeriesChart() {
       // @ts-ignore
       options={options}
       ref={chartRef}
+      width={"100%"}
+      height={"100%"}
       data={{
         labels,
         datasets: [

@@ -10,7 +10,7 @@ import {
   PointElement,
   Scale,
   Title,
-  Tooltip
+  Tooltip,
 } from "chart.js";
 import React from "react";
 import { Bar } from "react-chartjs-2";
@@ -24,7 +24,7 @@ const customCanvasBackgroundColor = {
     ctx.fillStyle = options.color || "#111c44";
     ctx.fillRect(0, 0, chart.width, chart.height);
     ctx.restore();
-  }
+  },
 };
 ChartJS.register(
   Title,
@@ -36,18 +36,18 @@ ChartJS.register(
   LinearScale,
   BarElement,
   Filler,
-  customCanvasBackgroundColor
+  customCanvasBackgroundColor,
 );
 
 export const options = {
   indexAxis: "y" as const,
   elements: {
     bar: {
-      borderWidth: 1
-    }
+      borderWidth: 1,
+    },
   },
   chartArea: {
-    backgroundColor: "#d346b1"
+    backgroundColor: "#d346b1",
   },
   animation: {},
   responsive: true,
@@ -61,7 +61,7 @@ export const options = {
     //   }
     // },
     colors: {
-      enabled: true
+      enabled: true,
     },
     legend: {
       position: "bottom" as const,
@@ -70,23 +70,25 @@ export const options = {
         font: {
           size: 14,
           family: "Segoe UI",
-          weight: "600"
+          weight: "600",
         },
-        color: "white"
-      }
+        color: "white",
+      },
     },
     title: {
       display: true,
       text: "Thống kê tấn công DDos trong ngày",
+      titleAlign: "center",
+      // align: "center",
       font: {
         size: 16,
         family: "Segoe UI",
-        weight: "600"
+        weight: "600",
       },
       padding: {
-        bottom: 20
+        bottom: 20,
       },
-      color: "white"
+      color: "white",
     },
     tooltip: {},
     // ******************** END ZOOM ********************
@@ -94,7 +96,7 @@ export const options = {
     maintainAspectRatio: false,
     interaction: {
       intersect: false,
-      mode: "index"
+      mode: "index",
     },
     showLine: true,
     scales: {
@@ -105,7 +107,7 @@ export const options = {
           drawOnChartArea: true,
           drawTicks: true,
           borderDash: [5, 5],
-          color: "rgb(255 255 255 / 0.2)"
+          color: "rgb(255 255 255 / 0.2)",
         },
         ticks: {
           display: false,
@@ -114,27 +116,27 @@ export const options = {
           font: {
             size: 14,
             family: "Segoe UI",
-            lineHeight: 2
-          }
-        }
+            lineHeight: 2,
+          },
+        },
       },
       y: {
         beginAtZero: false,
         suggestedMin: 0,
         grid: {
-          display: true
-          // color: "rgb(255 255 255 / 0.2)"
+          display: true,
+          color: "rgb(255 255 255 / 0.2)",
         },
         ticks: {
           color: "white",
           font: {
             size: 14,
-            family: "Segoe UI"
-          }
-        }
-      }
-    }
-  }
+            family: "Segoe UI",
+          },
+        },
+      },
+    },
+  },
 };
 
 const labels = ["January"];
@@ -144,35 +146,35 @@ export const data = {
   datasets: [
     {
       label: "thanhnien.vn",
-      data: [111]
-      // borderColor: "rgb(255, 99, 132)",
+      data: [111],
+      // borderColor: "rgb(255, 99, 132)"
       // backgroundColor: "rgba(255, 99, 132, 0.5)"
     },
     {
       label: "zingnews.vn",
-      data: [85]
+      data: [85],
       // borderColor: "rgb(53, 162, 235)",
       // backgroundColor: "rgba(53, 162, 235, 0.5)"
     },
     {
       label: "baomoi.com",
-      data: [67]
+      data: [67],
       // borderColor: "rgb(53, 162, 235)",
       // backgroundColor: "rgba(53, 162, 235, 0.5)"
     },
     {
       label: "tienphong.vn",
-      data: [121]
+      data: [121],
       // borderColor: "rgb(53, 162, 235)",
       // backgroundColor: "rgba(53, 162, 235, 0.5)"
     },
     {
       label: "sggp.org.vn",
-      data: [2]
+      data: [2],
       // borderColor: "rgb(53, 162, 235)",
       // backgroundColor: "rgba(53, 162, 235, 0.5)"
-    }
-  ]
+    },
+  ],
 };
 
 export function StackBarChart() {

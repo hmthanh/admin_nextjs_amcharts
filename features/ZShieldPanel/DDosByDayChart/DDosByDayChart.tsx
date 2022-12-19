@@ -2,7 +2,7 @@ import { useLayoutEffect, useState } from "react";
 import { IBandwidthType, Series } from "../../../helper/IDataType";
 import { getGradient } from "../../../helper/utils";
 import { dataUsage } from "../faker";
-import {StackBarChart} from "./StackBarChart";
+import { StackBarChart } from "./StackBarChart";
 // import { IBandwidthType, Series } from "../../helper/IDataType";
 // import { getGradient } from "../../helper/utils";
 // import { dataUsage } from "./faker";
@@ -47,16 +47,16 @@ export default function DDosByDayChart() {
               above: function (context: any) {
                 const { ctx, chartArea } = context.chart;
                 return getGradient(ctx, chartArea, gradient, width, height);
-              }
-            }
+              },
+            },
             // fill:"#3366CC",
             // backgroundColor: "#d048b6",
             // borderColor: "#d048b6",
             // pointBackgroundColor: "#d048b6",
             // pointBorderColor: "rgba(255,255,255,0)",
             // pointHoverBackgroundColor: "#d048b6",
-          }
-        ]
+          },
+        ],
       });
     }
   }, [gradient, height, width]);

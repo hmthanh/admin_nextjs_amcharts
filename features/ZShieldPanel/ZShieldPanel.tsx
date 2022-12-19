@@ -6,26 +6,26 @@ import TotalSummary from "../ZDNPanel/TotalSummary/TotalSummary";
 import AlertPanel from "./AlertPanel/AlertPanel";
 
 const GlobeMap = dynamic(() => import("../../components/Globe/GlobeMap"), {
-  ssr: false
+  ssr: false,
 });
 
 const BarChart = dynamic(() => import("../../components/Chart/BarChart"), {
-  ssr: false
+  ssr: false,
 });
 
 const DDosByMonthChart = dynamic(() => import("./DDosByMonthChart/DDosByMonthChart"), {
-  ssr: false
+  ssr: false,
 });
 
 const DDosByDayChart = dynamic(() => import("./DDosByDayChart/DDosByDayChart"), {
-  ssr: false
+  ssr: false,
 });
 
 export default function ZShieldPanel() {
   return (
     <div className="flex flex-col w-full h-screen dark">
       {/* <!-- Header --> */}
-      <div className="flex flex-row w-full">
+      {/* <div className="flex flex-row w-full">
         <div className="basic-1/4">
           <div className="flex zdn-logo w-[250px] h-full align-text-bottom gap-2 p-2">
             <div className="logo  flex justify-center align-middle flex-wrap content-center">
@@ -40,13 +40,13 @@ export default function ZShieldPanel() {
         <div className="basic-3/4 flex-auto p-3">
           <TotalSummary />
         </div>
-      </div>
+      </div> */}
       {/* <!-- Header --> */}
       {/* <GlobeMap /> */}
       {/* <!-- h-screen --> */}
-      <div className="grid grid-cols-4 gap-4 px-4 pb-4 w-full h-full">
+      <div className="grid grid-cols-9 gap-4 px-4 pb-4 w-full h-full">
         {/* <!-- ROW 1--> */}
-        <div className="col-span-1 ">
+        <div className="col-span-3 ">
           <div className="grid grid-rows gap-4 w-full">
             <div className=" w-full">
               <DDosByMonthChart />
@@ -59,16 +59,16 @@ export default function ZShieldPanel() {
         </div>
 
         {/* <!-- ROW 2 --> */}
-        <div className="col-span-2 ">
+        <div className="col-span-4">
           <div className="flex content-center h-full">
-              <GlobeMap />
+            <GlobeMap />
           </div>
         </div>
 
         {/* <!-- ROW 3 --> */}
-        <div className="col-span-1 ">
+        <div className="col-span-2">
           <div className="w-full h-full">
-            <AlertPanel/>
+            <AlertPanel />
           </div>
         </div>
       </div>

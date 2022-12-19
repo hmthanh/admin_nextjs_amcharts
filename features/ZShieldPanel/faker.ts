@@ -299,18 +299,14 @@ export const dataUsage = {
   error: 0,
   msg: "",
   data: [
-    { date: 1670217113000, value: 9 },
-    { date: 1670303513000, value: 68 },
-    { date: 1670389913000, value: 97 },
-    { date: 1670476313000, value: 31 },
-    { date: 1670562713000, value: 51 },
-    { date: 1670649113000, value: 19 },
-    { date: 1670735513000, value: 89 },
-    { date: 1670821913000, value: 118 },
-    { date: 1670908313000, value: 33 },
-    { date: 1670994713000, value: 64 },
-    { date: 1671081113000, value: 12 },
-    { date: 1671167513000, value: 99 }
+    { date: 1648801963000, value: 9 },
+    { date: 1651393963000, value: 68 },
+    { date: 1654072363000, value: 97 },
+    { date: 1656664363000, value: 31 },
+    { date: 1662021163000, value: 51 },
+    { date: 1664613163000, value: 19 },
+    { date: 1667291563000, value: 89 },
+    // { date: 1670908313000, value: 33 },
   ]
 };
 

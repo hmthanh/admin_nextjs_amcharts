@@ -3,6 +3,8 @@ import * as am5 from "@amcharts/amcharts5";
 import * as am5percent from "@amcharts/amcharts5/percent";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import { useLayoutEffect } from "react";
+import am5themes_Responsive from '@amcharts/amcharts5/themes/Responsive';
+
 // import * as am5plugins_forceDirected from "@amcharts/amcharts5/plugins/forceDirected";
 
 export interface ITreeNodeType {
@@ -19,7 +21,7 @@ export default function PieChartWithLegend() {
     let customTheme = am5.Theme.new(root);
     customTheme.rule("Label").set("fontSize", 12);
     customTheme.rule("Label").set("fill", am5.color("#FFFFFF"));
-    root.setThemes([am5themes_Animated.new(root), customTheme]);
+    root.setThemes([am5themes_Animated.new(root), customTheme, am5themes_Responsive.new(root)]);
 
     // Create chart
     // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
@@ -108,5 +110,5 @@ export default function PieChartWithLegend() {
     return () => root.dispose();
   }, []);
 
-  return <div id="PieChartWithLegend" style={{ width: "100%", height: "500px" }}></div>;
+  return <div id="PieChartWithLegend" style={{ width: "100%", height: "100%" }}></div>;
 }

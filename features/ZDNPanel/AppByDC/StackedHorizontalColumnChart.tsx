@@ -18,7 +18,7 @@ export default function StackedHorizontalColumnChart() {
     let root = am5.Root.new("StackedHorizontalColumnChart");
     root._logo?.dispose();
 
-    root.setThemes([am5themes_Animated.new(root)]);
+    root.setThemes([am5themes_Animated.new(root), am5themes_Responsive.new(root)]);
 
     // Create chart
     // https://www.amcharts.com/docs/v5/charts/xy-chart/
@@ -170,5 +170,5 @@ export default function StackedHorizontalColumnChart() {
     return () => root.dispose();
   }, []);
 
-  return <div id="StackedHorizontalColumnChart" style={{ width: "100%", height: "500px" }}></div>;
+  return <div id="StackedHorizontalColumnChart" style={{ width: "100%", height: "100%" }}></div>;
 }

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --panel-height: calc(100vh - 7.063rem);
+  --half-panel-height: calc(var(--panel-height) / 2 - 20px);
+}
+
 .box-right-containter {
   /* width: 35vw; */
   /* height: 42vh; */
@@ -73,10 +78,10 @@
   }
 
   .box-container {
-    @apply bg-[#111c44] shadow-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid;
+    @apply bg-[#111c44] shadow-xl relative break-words rounded-2xl border-0 border-solid;
+  }
+
+  .half-reponsive-panel {
+    @apply h-full;
   }
 }
-
-/* border-black/12.5  */
-/* shadow-dark-xl */
-/* shadow-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid */

@@ -12,7 +12,7 @@ import {
   ScriptableContext,
   Filler,
   Title,
-  Tooltip
+  Tooltip,
 } from "chart.js";
 import "chartjs-adapter-moment";
 
@@ -35,7 +35,7 @@ const customCanvasBackgroundColor = {
     ctx.fillStyle = options.color || "#111c44";
     ctx.fillRect(0, 0, chart.width, chart.height);
     ctx.restore();
-  }
+  },
 };
 
 ChartJS.register(
@@ -50,27 +50,11 @@ ChartJS.register(
   CategoryScale,
   Filler,
   zoomPlugin,
-  customCanvasBackgroundColor
+  customCanvasBackgroundColor,
 );
 
 export default function TimeSeriesChart() {
   const chartRef = useRef(null);
-  // const [gradient,setGradient] = useState({ addColorStop: (arg0: number, arg1: string) => {}});
-  let width = 0,
-    height = 0;
-
-  // useEffect(() => {
-  //   let gradient = {};
-  //   const chart = chartRef.current;
-  //   if (chart) {
-  //     const { ctx, chartArea } = chart;
-  //     gradient = getGradient(ctx, chartArea, gradient, width, height);
-  //     // return getGradient(ctx, chartArea, gradient, width, height);
-
-  //   }
-  // }, [width, height]);
-
-  // let gradient: CanvasGradient = {};
 
   const res: IBandwidthType = bandwidthData;
   let labels: number[] = [];
@@ -93,7 +77,7 @@ export default function TimeSeriesChart() {
       },
     },
     chartArea: {
-      backgroundColor: "#d346b1"
+      backgroundColor: "#d346b1",
     },
     animation: {},
     plugins: {
@@ -154,16 +138,16 @@ export default function TimeSeriesChart() {
       zoom: {
         animation: {
           duration: 1000,
-          easing: "easeOutCubic"
-        }
-      }
+          easing: "easeOutCubic",
+        },
+      },
     },
     // ******************** END ZOOM ********************
     responsive: true,
     maintainAspectRatio: false,
     interaction: {
       intersect: false,
-      mode: "index"
+      mode: "index",
     },
     showLine: true,
     scales: {
@@ -208,7 +192,7 @@ export default function TimeSeriesChart() {
             size: 14,
             family: "Segoe UI",
           },
-          callback: function (label:any) {
+          callback: function (label: any) {
             const download = Number(label);
             const newLabel = formatBytesPerSeconds(download);
             return newLabel;
@@ -241,7 +225,6 @@ export default function TimeSeriesChart() {
       options={options}
       ref={chartRef}
       width={"100%"}
-      // height={"50%"}
       data={{
         labels,
         datasets: [
@@ -249,7 +232,7 @@ export default function TimeSeriesChart() {
             label: "Bandwidth",
             data: values,
             borderWidth: 2.5,
-            borderColor:"#5E72E4",
+            borderColor: "#5E72E4",
             fill: "start",
             backgroundColor: (context: ScriptableContext<"line">) => {
               const ctx = context.chart.ctx;
@@ -258,21 +241,10 @@ export default function TimeSeriesChart() {
               gradient.addColorStop(0.2, "rgba(72,72,176,0.1)");
               gradient.addColorStop(0, "rgba(119,52,169,0)");
               return gradient;
-            }
-          }
-        ]
+            },
+          },
+        ],
       }}
     />
   );
 }
-
-// backgroundColor: (context: ScriptableContext<"line">) => {
-//   // const { ctx, chartArea } = context.chart;
-//   const ctx = context.chart.ctx;
-//   // const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-//   // return getGradient(ctx, chartArea, gradient, width, height);
-//   const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-//   // gradient.addColorStop(0, "rgba(250,174,50,1)");
-//   // gradient.addColorStop(1, "rgba(250,174,50,0)");
-//   return gradient;
-// }

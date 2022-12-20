@@ -56,8 +56,6 @@ const customCanvasBackgroundColor = {
 export default function TimeSeriesChart() {
   const chartRef = useRef(null);
   // const [gradient,setGradient] = useState({ addColorStop: (arg0: number, arg1: string) => {}});
-  let width = 0,
-    height = 0;
 
   // useEffect(() => {
   //   let gradient = {};
@@ -236,30 +234,13 @@ export default function TimeSeriesChart() {
     }
   };
 
-  // const labels = ["January", "February", "March", "April", "May", "June", "July"];
-  // const data = {
-  //   labels,
-  //   datasets: [
-  //     {
-  //       label: "Dataset 1",
-  //       data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-  //       borderColor: "rgb(255, 99, 132)",
-  //       backgroundColor: "rgba(255, 99, 132, 0.5)"
-  //     }
-  //   ]
-  // };
-
-  // useEffect(() => {
-  //   const chartCurrent = chartRef.current;
-  // })
-
   return (
     <Line
       // @ts-ignore
       options={options}
       ref={chartRef}
       width={"100%"}
-      height={"100%"}
+      className="h-full"
       data={{
         labels,
         datasets: [
@@ -283,14 +264,3 @@ export default function TimeSeriesChart() {
     />
   );
 }
-
-// backgroundColor: (context: ScriptableContext<"line">) => {
-//   // const { ctx, chartArea } = context.chart;
-//   const ctx = context.chart.ctx;
-//   // const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-//   // return getGradient(ctx, chartArea, gradient, width, height);
-//   const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-//   // gradient.addColorStop(0, "rgba(250,174,50,1)");
-//   // gradient.addColorStop(1, "rgba(250,174,50,0)");
-//   return gradient;
-// }

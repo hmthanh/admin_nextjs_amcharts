@@ -5,7 +5,7 @@ import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import am5themes_Responsive from "@amcharts/amcharts5/themes/Responsive";
 import * as am5hierarchy from "@amcharts/amcharts5/hierarchy";
 import { useLayoutEffect } from "react";
-import { treeServerBYDC } from "../../features/ZDNPanel/faker";
+import { treeServerBYDC } from "../../helper/faker";
 // import * as am5plugins_forceDirected from "@amcharts/amcharts5/plugins/forceDirected"; 
 
 export interface ITreeNodeType {

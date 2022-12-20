@@ -20,7 +20,7 @@ import zoomPlugin from "chartjs-plugin-zoom";
 import { useEffect, useRef, useState } from "react";
 import { Chart } from "react-chartjs-2";
 
-import { dataUsage } from "../../features/ZDNPanel/faker";
+import { dataUsage } from "../../helper/faker";
 import { IBandwidthType, Series } from "../../helper/IDataType";
 import { formatBytes, getGradient } from "../../helper/utils";
 

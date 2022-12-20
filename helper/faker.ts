@@ -1,7 +1,7 @@
-import { ITreeNodeType } from "../../components/Chart/DirectedTree";
-import { IBandwidthType, IUsageDataType } from "../../helper/IDataType";
+import { ITreeNodeType } from "../components/Chart/DirectedTree";
+import { IResponseType } from './IDataType';
 
-export const bandwidthData: IBandwidthType = {
+export const bandwidthData: IResponseType = {
   error: 0,
   msg: "",
   data: [
@@ -296,7 +296,7 @@ export const bandwidthData: IBandwidthType = {
   ]
 };
 
-export const dataUsage: IUsageDataType = {
+export const dataUsage: IResponseType = {
   error: 0,
   msg: "",
   data: [

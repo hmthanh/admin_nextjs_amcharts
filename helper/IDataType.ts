@@ -1,3 +1,9 @@
+export interface IResponseType{
+  error: number;
+  msg: string;
+  data: any[];
+}
+
 export interface Series {
   date: number;
   value: number;

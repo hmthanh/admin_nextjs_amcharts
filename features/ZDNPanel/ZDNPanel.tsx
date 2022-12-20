@@ -1,12 +1,9 @@
 import dynamic from "next/dynamic";
-import Card from "../../components/Card/Card";
-// import TimeSeries from "../../components/Chart/TimeSeries";
-import PaddingBox from "../../components/PaddingBox";
+import ZCDNLogo from "../Logo";
 import AppByDC from "./AppByDC/AppByDC";
-import ServerByDC from "./ServerByDC";
 import EdgeSeverStatistic from "./EdgeSeverStatistic/ServerStatistic";
 import EdgeSeverUsage from "./EdgeSeverUsage/EdgeSeverUsage";
-import ZCDNLogo from "../Logo";
+import ServerByDC from "./ServerByDC";
 
 // const PieChart = dynamic(() => import("../../components/Chart/PieChart"), {
 //   ssr: false

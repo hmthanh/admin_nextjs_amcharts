@@ -1,4 +1,4 @@
-import TimeSeriesChart from "../../../components/Chart/TimeSeriesChart";
+import TimeSeriesChart from "./TimeSeriesChart";
 import { formatBytes } from "../../../helper/utils";
 import { useDataUsage } from "./useDataUsage";
 import LoadingPanel from "../../../components/LoadingPanel/LoadingPanel";

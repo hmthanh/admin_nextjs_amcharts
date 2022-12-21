@@ -8,11 +8,11 @@ import ServerByDC from "./ServerByDC";
 // const PieChart = dynamic(() => import("../../components/Chart/PieChart"), {
 //   ssr: false
 // });
-const BandwidthChart = dynamic(() => import("./BandwidthChart/BandwidthChart"), {
+const BandwidthChart = dynamic(() => import("./SeriesBandwidthChart/BandwidthChart"), {
   ssr: false,
 });
 
-const DataUsageChart = dynamic(() => import("./DataUsageChart/DataUsageChart"), {
+const DataUsageChart = dynamic(() => import("./SeriesDataUsageChart/DataUsageChart"), {
   ssr: false,
 });
 

@@ -5,7 +5,6 @@ import zoomPlugin from "chartjs-plugin-zoom";
 import { useRef } from "react";
 import { Line } from "react-chartjs-2";
 
-
 const customCanvasBackgroundColor = {
   id: "customCanvasBackgroundColor",
   beforeDraw: (chart: any, args: any, options: any) => {

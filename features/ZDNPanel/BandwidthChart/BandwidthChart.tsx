@@ -7,6 +7,7 @@ import ErrorPanel from "../../../components/ErrorPanel/ErrorPanel";
 export default function BandwidthChart() {
   const { data, error, isLoading } = useBandwidthData();
 
+  // ***************** OPTION **********************
   const chartConfig = {
     elements: {
       point: {
@@ -142,6 +143,7 @@ export default function BandwidthChart() {
       },
     },
   };
+  // ***************** OPTION **********************
 
   if (error)
     return (
@@ -152,7 +154,7 @@ export default function BandwidthChart() {
   if (isLoading)
     return (
       <div className="p-6 box-container half-reponsive-panel">
-        <LoadingPanel/>
+        <LoadingPanel />
       </div>
     );
   return (

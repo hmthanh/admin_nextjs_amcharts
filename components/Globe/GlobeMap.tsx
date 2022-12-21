@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect } from 'react';
 
 import * as am5 from "@amcharts/amcharts5";
 import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
@@ -29,7 +29,7 @@ function selectCountry(chart: any, polygonSeries: any, id: any) {
 
 export default function GlobeMap() {
   // am5.useTheme(am5themes_Animated);
-  useLayoutEffect(() => {
+  useEffect(() => {
     let root = am5.Root.new("GlobeMap");
     root._logo?.dispose();
 

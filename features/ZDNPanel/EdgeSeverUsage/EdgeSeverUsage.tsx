@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const StackedVerticalColumnChart = dynamic(() => import("./StackedVerticalColumnChart"), {
   ssr: false,
@@ -8,7 +8,7 @@ const StackedVerticalColumnChart = dynamic(() => import("./StackedVerticalColumn
 export default function EdgeSeverUsage() {
   const [dataUsageChart, setDataUsageChart] = useState({});
 
-  useLayoutEffect(() => {}, []);
+  useEffect(() => {}, []);
 
   return (
     <div className="pt-3 box-container h-full">

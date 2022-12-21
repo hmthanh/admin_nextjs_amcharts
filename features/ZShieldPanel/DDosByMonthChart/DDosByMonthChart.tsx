@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { IBandwidthType, Series } from "../../../helper/IDataType";
 import { getGradient } from "../../../helper/utils";
 import { dataUsage } from "../faker";
@@ -14,7 +14,7 @@ export default function DDosByMonthChart() {
   const width = 0,
     height = 0;
   let gradient: any;
-  useLayoutEffect(() => {
+  useEffect(() => {
     // async () => {
     // const response = await fetch("http://10.90.85.9:19040/stats?a=ZDNDataUsage&domain=zadn&day=30");
     // const res: IBandwidthType = await response.json();

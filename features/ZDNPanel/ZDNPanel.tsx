@@ -62,15 +62,15 @@ export default function ZDNPanel() {
             </div>
           </div>
           <div className="col-span-2">
-          <div className="flex flex-col gap-4 h-full">
-            <div className="flex-1 w-full h-full">
-              <DataUsageChart />
-            </div>
-            <div className="flex-1 w-full h-full">
-              <BandwidthChart />
+            <div className="flex flex-col gap-4 h-full">
+              <div className="flex-1 w-full h-full">
+                <DataUsageChart />
+              </div>
+              <div className="flex-1 w-full h-full">
+                <BandwidthChart />
+              </div>
             </div>
           </div>
-        </div>
 
           <div className="col-span-1">
             <div className="flex flex-col gap-4 h-full">
@@ -84,7 +84,6 @@ export default function ZDNPanel() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
 

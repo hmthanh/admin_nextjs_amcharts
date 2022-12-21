@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PieChart from "../../../components/Chart/PieChart";
 
 const PieChartWithLegend = dynamic(() => import("./PieChartWithLegend"), {
@@ -20,7 +20,7 @@ export default function EdgeSeverStatistic() {
     ]
   };
 
-  useLayoutEffect(() => {}, []);
+  useEffect(() => {}, []);
 
   return (
     <div

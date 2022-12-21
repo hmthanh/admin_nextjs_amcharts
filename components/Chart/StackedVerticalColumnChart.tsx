@@ -3,11 +3,11 @@ import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import * as am5hierarchy from "@amcharts/amcharts5/hierarchy";
-import { useLayoutEffect } from "react";
+import { useEffect } from 'react';
 
 export default function StackedColumnChart() {
   // am5.useTheme(am5themes_Animated);
-  useLayoutEffect(() => {
+  useEffect(() => {
     let root = am5.Root.new("StackedColumnChart");
     root._logo?.dispose();
 

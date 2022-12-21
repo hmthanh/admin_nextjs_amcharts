@@ -1,10 +1,28 @@
+import ErrorPanel from "../../../components/ErrorPanel/ErrorPanel";
+import LoadingPanel from "../../../components/LoadingPanel/LoadingPanel";
 import ItemSummary, { ItemSummmaryType } from "./ItemSummary";
+import { useSummary } from "./useSummary";
 
 export default function TotalSummary() {
+  const { data, error, isLoading } = useSummary();
+
+  if (error)
+    return (
+      <div className="p-6 box-container half-reponsive-panel">
+        <ErrorPanel />
+      </div>
+    );
+  if (isLoading)
+    return (
+      <div className="p-6 box-container half-reponsive-panel">
+        <LoadingPanel />
+      </div>
+    );
+
   const dataItems: ItemSummmaryType[] = [
     {
       name: "Products",
-      value: 82,
+      value: 0,
       icon: (
         <div className="icon-wrapper inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-blue-500 to-violet-500">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -14,11 +32,11 @@ export default function TotalSummary() {
             />
           </svg>
         </div>
-      )
+      ),
     },
     {
       name: "Applications",
-      value: 892,
+      value: 0,
       icon: (
         <div className="icon-wrapper inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-red-600 to-orange-600">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -28,11 +46,11 @@ export default function TotalSummary() {
             />
           </svg>
         </div>
-      )
+      ),
     },
     {
       name: "Cluster",
-      value: 43,
+      value: 0,
       icon: (
         <div className="icon-wrapper inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-emerald-500 to-teal-400">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -42,11 +60,11 @@ export default function TotalSummary() {
             />
           </svg>
         </div>
-      )
+      ),
     },
     {
       name: "Edge Servers",
-      value: 113,
+      value: 0,
       icon: (
         <div className="icon-wrapper inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-orange-500 to-yellow-500">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
@@ -56,34 +74,91 @@ export default function TotalSummary() {
             />
           </svg>
         </div>
-      )
+      ),
     },
     {
       name: "DNS Record",
-      value: 138,
+      value: 0,
       icon: (
         <div className="icon-wrapper inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-purple-500 to-pink-500">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path
               d="M4 6.25C4 5.00736 5.00736 4 6.25 4H14.75C15.9926 4 17 5.00736 17 6.25V14H20.5V17.25C20.5 19.0449 19.0449 20.5 17.25 20.5H7.25C5.45507 20.5 4 19.0449 4 17.25V6.25ZM17 15.5V19H17.25C18.2165 19 19 18.2165 19 17.25V15.5H17ZM15.5 19V6.25C15.5 5.83579 15.1642 5.5 14.75 5.5H6.25C5.83579 5.5 5.5 5.83579 5.5 6.25V17.25C5.5 18.2165 6.2835 19 7.25 19H15.5ZM7.00001 8.75C7.00001 8.33579 7.3358 8 7.75001 8H13.25C13.6642 8 14 8.33579 14 8.75C14 9.16422 13.6642 9.5 13.25 9.5H7.75001C7.3358 9.5 7.00001 9.16422 7.00001 8.75ZM7.00001 12.25C7.00001 11.8358 7.3358 11.5 7.75001 11.5H13.25C13.6642 11.5 14 11.8358 14 12.25C14 12.6642 13.6642 13 13.25 13H7.75001C7.3358 13 7.00001 12.6642 7.00001 12.25ZM7.00001 15.75C7.00001 15.3358 7.3358 15 7.75001 15H10.25C10.6642 15 11 15.3358 11 15.75C11 16.1642 10.6642 16.5 10.25 16.5H7.75001C7.3358 16.5 7.00001 16.1642 7.00001 15.75Z"
               fill="#fff"
             />
+          </svg> */}
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M5.99976 10C3.79026 10 1.99911 11.7912 1.99911 14.0007C1.99911 15.0157 2.37715 15.9425 3.00012 16.6479L3.00019 21.2487C3.00019 21.8195 3.60469 22.1681 4.09028 21.9176L4.17976 21.8635L6.00011 20.5912L7.81976 21.8635C8.28766 22.1904 8.91968 21.8946 8.99242 21.353L8.99932 21.2487L9.0003 16.6468C9.62273 15.9416 10.0004 15.0152 10.0004 14.0007C10.0004 11.7912 8.20925 10 5.99976 10ZM4.50102 17.7111C4.9639 17.8982 5.4698 18.0013 5.99976 18.0013C6.53048 18.0013 7.03706 17.898 7.50047 17.7103L7.50011 19.8092L6.42932 19.0621C6.20357 18.9044 5.91265 18.8847 5.6706 19.003L5.57019 19.0621L4.50112 19.8092L4.50102 17.7111ZM4.7504 3.00421C3.28787 3.00421 2.092 4.14592 2.00542 5.58669L2.0004 5.75421L1.99902 11.0001C2.40333 10.4619 2.91372 10.0079 3.49914 9.66918L3.5004 5.75421C3.5004 5.107 3.99227 4.57468 4.62259 4.51066L4.7504 4.50421H19.2504C19.8976 4.50421 20.4299 4.99609 20.4939 5.62641L20.5004 5.75421V15.2542C20.5004 15.9014 20.0085 16.4337 19.3782 16.4978L19.2504 16.5042L10.3288 16.5054L10.2049 16.7079L10.0713 16.9046L10.0004 16.998L10.0014 18.0042H19.2504C20.7129 18.0042 21.9088 16.8625 21.9954 15.4217L22.0004 15.2542V5.75421C22.0004 4.29168 20.8587 3.09581 19.4179 3.00923L19.2504 3.00421H4.7504ZM5.99976 11.5C7.38082 11.5 8.5004 12.6196 8.5004 14.0007C8.5004 15.3817 7.38082 16.5013 5.99976 16.5013C4.61869 16.5013 3.49911 15.3817 3.49911 14.0007C3.49911 12.6196 4.61869 11.5 5.99976 11.5ZM12.7504 12.5C12.3362 12.5 12.0004 12.8358 12.0004 13.25C12.0004 13.6297 12.2826 13.9435 12.6486 13.9932L12.7504 14H17.2504C17.6646 14 18.0004 13.6642 18.0004 13.25C18.0004 12.8703 17.7182 12.5565 17.3522 12.5069L17.2504 12.5H12.7504ZM6.7504 7.00001C6.33619 7.00001 6.0004 7.33579 6.0004 7.75001C6.0004 8.1297 6.28255 8.4435 6.64863 8.49316L6.7504 8.50001H17.2504C17.6646 8.50001 18.0004 8.16422 18.0004 7.75001C18.0004 7.37031 17.7182 7.05652 17.3522 7.00685L17.2504 7.00001H6.7504Z"
+              fill="#fff"
+            />
           </svg>
         </div>
-      )
-    }
+      ),
+    },
+    {
+      name: "Subdomain",
+      value: 0,
+      icon: (
+        <div className="icon-wrapper inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-purple-500 to-pink-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M3.5 5.75C3.5 5.61193 3.61193 5.5 3.75 5.5H10C10.6904 5.5 11.25 6.05964 11.25 6.75V15.7086C11.5366 14.7067 12.0577 13.8037 12.75 13.0629V6.75C12.75 6.05964 13.3096 5.5 14 5.5H20.25C20.3881 5.5 20.5 5.61193 20.5 5.75V11.7322C21.051 12.0194 21.5557 12.3832 22 12.8096V5.75C22 4.7835 21.2165 4 20.25 4H14C13.212 4 12.5014 4.33145 12 4.86253C11.4986 4.33145 10.788 4 10 4H3.75C2.7835 4 2 4.7835 2 5.75V18.25C2 19.2165 2.7835 20 3.75 20H10C10.495 20 10.9594 19.8692 11.3606 19.6404C11.1769 19.1134 11.0592 18.5555 11.0172 17.9767C10.7905 18.2935 10.4193 18.5 10 18.5H3.75C3.61193 18.5 3.5 18.3881 3.5 18.25V5.75Z"
+              fill="#fff"
+            />
+            <path
+              d="M16.0071 17C16.0471 15.5855 16.2549 14.3312 16.5602 13.4155C16.7314 12.9017 16.9243 12.522 17.1143 12.281C17.3086 12.0344 17.4428 12 17.5 12C17.5573 12 17.6915 12.0344 17.8858 12.281C18.0757 12.522 18.2687 12.9017 18.4399 13.4155C18.7452 14.3312 18.953 15.5855 18.993 17H16.0071Z"
+              fill="#fff"
+            />
+            <path
+              d="M15.6115 13.0992C15.7189 12.7771 15.8413 12.4781 15.9793 12.2129C13.8357 12.8284 12.2286 14.7122 12.0225 17H15.0067C15.0468 15.4998 15.2664 14.1345 15.6115 13.0992Z"
+              fill="#fff"
+            />
+            <path
+              d="M19.3886 13.0992C19.2812 12.7771 19.1588 12.4781 19.0208 12.2129C21.1644 12.8284 22.7715 14.7122 22.9776 17H19.9934C19.9532 15.4998 19.7337 14.1345 19.3886 13.0992Z"
+              fill="#fff"
+            />
+            <path
+              d="M19.9934 18H22.9776C22.7715 20.2878 21.1644 22.1716 19.0208 22.7871C19.1588 22.5219 19.2812 22.2229 19.3886 21.9008C19.7337 20.8655 19.9532 19.5002 19.9934 18Z"
+              fill="#fff"
+            />
+            <path
+              d="M17.8858 22.719C17.6915 22.9656 17.5573 23 17.5 23C17.4428 23 17.3086 22.9656 17.1143 22.719C16.9243 22.478 16.7314 22.0983 16.5602 21.5845C16.2549 20.6688 16.0471 19.4145 16.0071 18H18.993C18.953 19.4145 18.7452 20.6688 18.4399 21.5845C18.2687 22.0983 18.0757 22.478 17.8858 22.719Z"
+              fill="#fff"
+            />
+            <path
+              d="M12.0225 18C12.2286 20.2878 13.8357 22.1716 15.9793 22.7871C15.8413 22.5219 15.7189 22.2229 15.6115 21.9008C15.2664 20.8655 15.0468 19.5002 15.0067 18H12.0225Z"
+              fill="#fff"
+            />
+          </svg>
+        </div>
+      ),
+    },
   ];
+  if (data) {
+    // const metrics = Object.keys(data);
+    // metrics.map((metric:string) => {
+
+    // })
+    // console.log("dataItems", Object.keys(dataItems));
+    // dataItems.map(items =>{
+    //   console.log("data2", items)
+
+    // })
+
+    dataItems[0].value = data.Production;
+    dataItems[1].value = data.Application;
+    dataItems[2].value = data.Cluster;
+    dataItems[3].value = data.Server;
+    dataItems[4].value = data["DNS Record"];
+    dataItems[5].value = data.Subdomain;
+  }
   return (
     <div className="flex flex-wrap items-center content-center gap-4 justify-evenly">
       {dataItems &&
         dataItems.map((item, idx) => {
           return <ItemSummary key={idx} {...item} />;
         })}
-
-      {/* <ItemSummary />
-      <ItemSummary />
-      <ItemSummary />
-      <ItemSummary /> */}
     </div>
   );
 }

@@ -2,10 +2,10 @@ import TimeSeriesChart from "../../../components/Chart/TimeSeriesChart";
 import { formatBytes } from "../../../helper/utils";
 import { useDataUsage } from "./useDataUsage";
 import LoadingPanel from "../../../components/LoadingPanel/LoadingPanel";
+import ErrorPanel from "../../../components/ErrorPanel/ErrorPanel";
 
 export default function DataUsageChart() {
   const { data, error, isLoading } = useDataUsage();
-  // console.log("data", data);
 
   // ***************** OPTION **********************
   const chartConfig = {
@@ -159,7 +159,12 @@ export default function DataUsageChart() {
   };
   // ***************** OPTION **********************
 
-  if (error) return <div className="p-6 box-container half-reponsive-panel">Failed to load</div>;
+  if (error)
+    return (
+      <div className="p-6 box-container half-reponsive-panel">
+        <ErrorPanel />
+      </div>
+    );
   if (isLoading)
     return (
       <div className="p-6 box-container half-reponsive-panel">

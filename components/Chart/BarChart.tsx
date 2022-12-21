@@ -2,11 +2,12 @@ import * as am5 from "@amcharts/amcharts5";
 // import * as am5map from "@amcharts/amcharts5/map";
 import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
-import { useLayoutEffect } from "react";
+import { useEffect } from 'react';
 
 export default function BarChart() {
   // am5.useTheme(am5themes_Animated);
-  useLayoutEffect(() => {
+  // useEffect(() => {
+  useEffect(() => {
     let root = am5.Root.new("BarChart");
     root._logo?.dispose();
 

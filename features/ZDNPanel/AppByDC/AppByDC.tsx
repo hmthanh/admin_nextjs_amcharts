@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // import PieChart from "../../components/Chart/PieChart";
 const StackedHorizontalColumnChart = dynamic(() => import("./StackedHorizontalColumnChart"), {
   ssr: false

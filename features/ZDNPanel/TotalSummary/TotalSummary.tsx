@@ -100,7 +100,7 @@ export default function TotalSummary() {
       name: "Subdomain",
       value: 0,
       icon: (
-        <div className="icon-wrapper inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-purple-500 to-pink-500">
+        <div className="icon-wrapper inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-cyan-500 to-sky-600">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path
               d="M3.5 5.75C3.5 5.61193 3.61193 5.5 3.75 5.5H10C10.6904 5.5 11.25 6.05964 11.25 6.75V15.7086C11.5366 14.7067 12.0577 13.8037 12.75 13.0629V6.75C12.75 6.05964 13.3096 5.5 14 5.5H20.25C20.3881 5.5 20.5 5.61193 20.5 5.75V11.7322C21.051 12.0194 21.5557 12.3832 22 12.8096V5.75C22 4.7835 21.2165 4 20.25 4H14C13.212 4 12.5014 4.33145 12 4.86253C11.4986 4.33145 10.788 4 10 4H3.75C2.7835 4 2 4.7835 2 5.75V18.25C2 19.2165 2.7835 20 3.75 20H10C10.495 20 10.9594 19.8692 11.3606 19.6404C11.1769 19.1134 11.0592 18.5555 11.0172 17.9767C10.7905 18.2935 10.4193 18.5 10 18.5H3.75C3.61193 18.5 3.5 18.3881 3.5 18.25V5.75Z"

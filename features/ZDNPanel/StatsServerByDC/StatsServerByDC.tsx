@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 // import PieChart from "../../components/Chart/PieChart";
-const DirectedTree = dynamic(() => import("../../components/Chart/DirectedTree"), {
-  ssr: false
+const DirectedTree = dynamic(() => import("../../../components/Chart/DirectedTree"), {
+  ssr: false,
 });
 
 export default function ServerByDC() {
@@ -31,10 +31,8 @@ export default function ServerByDC() {
   //   });
   // }, []);
   return (
-    <div
-      className="box-container h-full"
-    >
-      <DirectedTree/>
+    <div className="box-container h-full">
+      <DirectedTree />
     </div>
   );
 }

@@ -1,18 +1,18 @@
 import dynamic from "next/dynamic";
 import ZCDNLogo from "../Logo";
-import AppByDC from "./AppByDC/AppByDC";
+import AppByDC from "./StatsAppByDC/StatsAppByDC";
 import EdgeSeverStatistic from "./EdgeSeverStatistic/ServerStatistic";
 import EdgeSeverUsage from "./EdgeSeverUsage/EdgeSeverUsage";
-import ServerByDC from "./ServerByDC";
+import ServerByDC from "./StatsServerByDC/StatsServerByDC";
 
 // const PieChart = dynamic(() => import("../../components/Chart/PieChart"), {
 //   ssr: false
 // });
-const BandwidthChart = dynamic(() => import("./SeriesBandwidthChart/BandwidthChart"), {
+const BandwidthChart = dynamic(() => import("./SeriesBandwidthChart/SeriesBandwidthChart"), {
   ssr: false,
 });
 
-const DataUsageChart = dynamic(() => import("./SeriesDataUsageChart/DataUsageChart"), {
+const DataUsageChart = dynamic(() => import("./SeriesDataUsageChart/SeriesDataUsageChart"), {
   ssr: false,
 });
 

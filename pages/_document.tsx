@@ -74,7 +74,7 @@ export default class MyDocument extends Document {
       // return initialProps;
       return {
         ...initialProps,
-        ...initialProps.styles
+        ...initialProps.styles,
       };
     } finally {
     }
@@ -98,7 +98,7 @@ export default class MyDocument extends Document {
           <link rel="preload" href="/fonts/segoeui-semilight.woff2" crossOrigin="" as="font" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-          
+          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
           {/* <Script src=/> */}
           {/* <link
             href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap"

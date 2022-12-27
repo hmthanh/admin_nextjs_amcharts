@@ -22,8 +22,7 @@ export function useSummary() {
   let summary: ISummaryType = { Application: 0, Cluster: 0, "DNS Record": 0, Production: 0, Server: 0, Subdomain: 0 };
   if (data) {
     summary = data.data;
-    // console.log("useSummary", data.data);
-    console.log("summary", summary);
+    // console.log("summary", summary);
   }
 
   return { data: summary, error, isLoading };

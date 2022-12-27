@@ -4,6 +4,7 @@ import AppByDC from "./StatsAppByDC/StatsAppByDC";
 import EdgeSeverStatistic from "./EdgeSeverStatistic/ServerStatistic";
 import EdgeSeverUsage from "./EdgeSeverUsage/EdgeSeverUsage";
 import ServerByDC from "./StatsServerByDC/StatsServerByDC";
+import VietnamMap from "./VietnamMap/VietnamMap";
 
 // const PieChart = dynamic(() => import("../../components/Chart/PieChart"), {
 //   ssr: false
@@ -50,43 +51,37 @@ export default function ZDNPanel() {
 
       {/* <!-- Body --> */}
       <div className="flex-auto h-[calc(100vh - 2rem)]">
-        <div className="grid grid-cols-4 gap-4 px-4 pb-4 w-full h-full">
-          <div className="col-span-1">
+        <div className="grid grid-cols-11 gap-4 px-4 pb-4 w-full h-full">
+          <div className="col-span-4">
             <div className="flex flex-col gap-4 h-full">
-              <div className="flex-1 w-full h-full">
-                <ServerByDC />
-              </div>
-              <div className="flex-1 w-full h-full">
-                <AppByDC />
-              </div>
-            </div>
-          </div>
-          <div className="col-span-2">
-            <div className="flex flex-col gap-4 h-full">
-              <div className="flex-1 w-full h-full">
-                <DataUsageChart />
-              </div>
-              <div className="flex-1 w-full h-full">
-                <BandwidthChart />
-              </div>
+              <div className="flex-1 w-full h-full">{/* <DataUsageChart /> */}</div>
+              <div className="flex-1 w-full h-full">{/* <BandwidthChart /> */}</div>
             </div>
           </div>
 
-          <div className="col-span-1">
-            <div className="flex flex-col gap-4 h-full">
+          <div className="col-span-3">
+            <div className="flex h-full">
               <div className="flex-1 w-full h-full">
                 {/* <ServerByDC /> */}
-                <EdgeSeverStatistic />
+                <VietnamMap />
               </div>
-              <div className="flex-1 w-full h-full">
-                {/* <AppByDC /> */}
-                <EdgeSeverUsage />
-              </div>
+              {/* <div className="flex-1 w-full h-full">
+                <AppByDC />
+              </div> */}
+            </div>
+          </div>
+
+          <div className="col-span-4">
+            <div className="flex flex-col gap-4 h-full">
+              <div className="flex-1 w-full h-full">{/* <EdgeSeverStatistic /> */}</div>
+              <div className="flex-1 w-full h-full">{/* <EdgeSeverUsage /> */}</div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* <ServerByDC /> */}
+      {/* <AppByDC /> */}
       {/* <!-- Body --> */}
     </div>
   );

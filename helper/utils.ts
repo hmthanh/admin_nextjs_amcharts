@@ -66,16 +66,27 @@ export const formatBytes = (bytes: number, decimals = 2) => {
 
   const k = 1024;
   const dm = decimals < 0 ? 0 : decimals;
+  // const sizes = [
+  //   "Bytes",
+  //   "Kilobyte",
+  //   "Megabyte",
+  //   "Gigabyte",
+  //   "Terabyte",
+  //   "Petabyte",
+  //   "Exabyte",
+  //   "Zettabyte",
+  //   "Yottabyte"
+  // ];
   const sizes = [
     "Bytes",
-    "Kilobyte",
-    "Megabyte",
-    "Gigabyte",
-    "Terabyte",
-    "Petabyte",
-    "Exabyte",
-    "Zettabyte",
-    "Yottabyte"
+    "KByte",
+    "MByte",
+    "GByte",
+    "TByte",
+    "PByte",
+    "EByte",
+    "ZByte",
+    "YByte"
   ];
 
   const i = Math.floor(Math.log(bytes) / Math.log(k));
@@ -86,7 +97,7 @@ export const formatBytes = (bytes: number, decimals = 2) => {
   }
 };
 
-export const formatBytesPerSeconds = (bytes: number, decimals = 2) => {
+export const formatBytesPerSeconds = (bytes: number, decimals = 0) => {
   if (bytes === undefined) {
     return "";
   }

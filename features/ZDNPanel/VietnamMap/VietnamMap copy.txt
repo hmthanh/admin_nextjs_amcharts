@@ -1,0 +1,118 @@
+import * as d3 from "d3";
+import React, { useEffect, useRef } from "react";
+
+import ErrorPanel from "../../../components/ErrorPanel/ErrorPanel";
+import LoadingPanel from "../../../components/LoadingPanel/LoadingPanel";
+import { useStatsServer } from "./useStatsServer";
+import * as am5 from "@amcharts/amcharts5";
+import * as am5map from "@amcharts/amcharts5/map";
+import am5geodata_vietnamLow from "@amcharts/amcharts5-geodata/vietnamLow";
+// import am5geodata_vietnamLow from "@amcharts/amcharts5-geodata/region/usa/congressional2022/usaCongressionalLow";
+// import am5geodata_region/usa/congressional2022/usaCongressionalLow from "@amcharts/amcharts5-geodata/region/usa/congressional2022/usaCongressionalLow";
+import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
+import { chartData } from "./chartData";
+export let colors = {
+  D: am5.color(0x244999),
+  R: am5.color(0xd22532),
+  N: am5.color(0x999999),
+};
+
+export default function VietnamMap() {
+  const { data, error, isLoading } = useStatsServer();
+  /* Chart code */
+  // Colors
+  
+
+  useEffect(() => {
+    // // Populate colors
+    // for (var i = 0; i < chartData.length; i++) {
+    //   chartData[i].polygonSettings = {
+    //     fill: colors[chartData[i].party],
+    //   };
+    // }
+
+    // // Create root and chart
+    // let root = am5.Root.new("VietnamMap");
+    // root._logo?.dispose();
+
+    // // Set themes
+    // root.setThemes([am5themes_Animated.new(root)]);
+
+    // let chart = root.container.children.push(
+    //   am5map.MapChart.new(root, {
+    //     panX: "rotateX",
+    //     projection: am5map.geoAlbersUsa(),
+    //   }),
+    // );
+
+    // // Create polygon series
+    // let polygonSeries = chart.series.push(
+    //   am5map.MapPolygonSeries.new(root, {
+    //     geoJSON: am5geodata_vietnamLow,
+    //   }),
+    // );
+
+    // polygonSeries.mapPolygons.template.setAll({
+    //   tooltipText: "[bold]{STATENAME} ({party})[/]\n{name}",
+    //   templateField: "polygonSettings",
+    //   fillOpacity: 0.9,
+    // });
+
+    // polygonSeries.mapPolygons.template.states.create("hover", {
+    //   fillOpacity: 1,
+    // });
+
+    // polygonSeries.data.setAll(chartData);
+
+    // // Legend
+    // let legend = chart.children.push(
+    //   am5.Legend.new(root, {
+    //     nameField: "name",
+    //     fillField: "color",
+    //     strokeField: "color",
+    //     useDefaultMarker: true,
+    //     centerX: am5.p100,
+    //     maxWidth: 100,
+    //     x: am5.p100,
+    //     centerY: am5.p100,
+    //     y: am5.p100,
+    //     dx: -20,
+    //     dy: -20,
+    //     background: am5.RoundedRectangle.new(root, {
+    //       fill: am5.color(0xffffff),
+    //       fillOpacity: 0.3,
+    //     }),
+    //   }),
+    // );
+    // legend.data.setAll([
+    //   {
+    //     name: "Democrats",
+    //     color: colors.D,
+    //   },
+    //   {
+    //     name: "Republicans",
+    //     color: colors.R,
+    //   },
+    //   {
+    //     name: "Neutral",
+    //     color: colors.N,
+    //   },
+    // ]);
+    
+
+  //   if (error)
+  //     return (
+  //       <div className="p-6 box-container half-reponsive-panel">
+  //         <ErrorPanel />
+  //       </div>
+  //     );
+  //   if (isLoading)
+  //     return (
+  //       <div className="p-6 box-container half-reponsive-panel">
+  //         <LoadingPanel />
+  //       </div>
+  //     );
+  //   if (data) {
+  //   }
+  return <div id="VietnamMap" style={{ width: "100%", height: "100%" }}></div>;
+}

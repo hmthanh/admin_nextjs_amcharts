@@ -4,7 +4,11 @@ import AppByDC from "./StatsAppByDC/StatsAppByDC";
 import EdgeSeverStatistic from "./EdgeSeverStatistic/ServerStatistic";
 import EdgeSeverUsage from "./EdgeSeverUsage/EdgeSeverUsage";
 import ServerByDC from "./StatsServerByDC/StatsServerByDC";
-import VietnamMap from "./VietnamMap/VietnamMap";
+// import VietnamMap from "";
+
+const VietnamMap = dynamic(() => import("./VietnamMap/VietnamMap"), {
+  ssr: false,
+});
 
 // const PieChart = dynamic(() => import("../../components/Chart/PieChart"), {
 //   ssr: false

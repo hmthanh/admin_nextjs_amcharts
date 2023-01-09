@@ -45,27 +45,27 @@ export default function ZShieldPanel() {
       {/* <GlobeMap /> */}
       {/* <!-- h-screen --> */}
       <div className="grid grid-cols-9 gap-4 px-4 pb-4 w-full h-full">
-        {/* <!-- ROW 1--> */}
+        {/* <!-- COL 1--> */}
         <div className="col-span-3 ">
-          <div className="grid grid-rows gap-4 w-full">
-            <div className=" w-full">
+          <div className="flex flex-col gap-4 h-full">
+            <div className="flex-1 w-full h-full">
               <DDosByMonthChart />
             </div>
-            <div className="w-full">
+            <div className="flex-1 w-full h-full">
               <DDosByDayChart />
               {/* <AppByDC /> */}
             </div>
           </div>
         </div>
 
-        {/* <!-- ROW 2 --> */}
+        {/* <!-- COL 2 --> */}
         <div className="col-span-4">
           <div className="flex content-center h-full">
             <GlobeMap />
           </div>
         </div>
 
-        {/* <!-- ROW 3 --> */}
+        {/* <!-- COL 3 --> */}
         <div className="col-span-2">
           <div className="w-full h-full">
             <AlertPanel />

@@ -66,12 +66,7 @@ export default function DDosByDayChart() {
   // ***************** OPTION **********************
 
   return (
-    <div
-      className="p-6 box-left-containter bg-slate-850 bg-[#111c44]
-                border-black/12.5 dark:bg-slate-850 dark:shadow-dark-xl 
-                shadow-xl relative z-20 min-w-0
-                break-words rounded-2xl border-0 border-solid"
-    >
+    <div className="p-6 box-container half-reponsive-panel">
       <StackBarChart />
     </div>
   );

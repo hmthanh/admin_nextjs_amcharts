@@ -26,8 +26,7 @@ export default function AlertPanel() {
                     <div
                       className="default-react-icon-thumb"
                       style={{
-                        backgroundImage:
-                          "url('https://res-zalo.zadn.vn/upload/media/2019/1/25/iconlike_1548389696575_103596.png')"
+                        backgroundImage: "url('https://res-zalo.zadn.vn/upload/media/2019/1/25/iconlike_1548389696575_103596.png')",
                       }}
                     ></div>
                   </div>
@@ -62,8 +61,7 @@ export default function AlertPanel() {
                     <div
                       className="default-react-icon-thumb"
                       style={{
-                        backgroundImage:
-                          "url('https://res-zalo.zadn.vn/upload/media/2019/1/25/iconlike_1548389696575_103596.png')"
+                        backgroundImage: "url('https://res-zalo.zadn.vn/upload/media/2019/1/25/iconlike_1548389696575_103596.png')",
                       }}
                     ></div>
                   </div>
@@ -98,8 +96,7 @@ export default function AlertPanel() {
                     <div
                       className="default-react-icon-thumb"
                       style={{
-                        backgroundImage:
-                          "url('https://res-zalo.zadn.vn/upload/media/2019/1/25/iconlike_1548389696575_103596.png')"
+                        backgroundImage: "url('https://res-zalo.zadn.vn/upload/media/2019/1/25/iconlike_1548389696575_103596.png')",
                       }}
                     ></div>
                   </div>
@@ -135,8 +132,7 @@ export default function AlertPanel() {
                     <div
                       className="default-react-icon-thumb"
                       style={{
-                        backgroundImage:
-                          "url('https://res-zalo.zadn.vn/upload/media/2019/1/25/iconlike_1548389696575_103596.png')"
+                        backgroundImage: "url('https://res-zalo.zadn.vn/upload/media/2019/1/25/iconlike_1548389696575_103596.png')",
                       }}
                     ></div>
                   </div>

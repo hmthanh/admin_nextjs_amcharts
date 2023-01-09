@@ -4,11 +4,10 @@ import AppByDC from "./StatsAppByDC/StatsAppByDC";
 import EdgeSeverStatistic from "./EdgeSeverStatistic/ServerStatistic";
 import EdgeSeverUsage from "./EdgeSeverUsage/EdgeSeverUsage";
 import ServerByDC from "./StatsServerByDC/StatsServerByDC";
-// import VietnamMap from "";
 
-const VietnamMap = dynamic(() => import("./VietnamMap/VietnamMap"), {
-  ssr: false,
-});
+// const VietnamMap = dynamic(() => import("./VietnamMap/VietnamMap"), {
+//   ssr: false,
+// });
 
 // const PieChart = dynamic(() => import("../../components/Chart/PieChart"), {
 //   ssr: false
@@ -55,19 +54,23 @@ export default function ZDNPanel() {
 
       {/* <!-- Body --> */}
       <div className="flex-auto h-[calc(100vh - 2rem)]">
-        <div className="grid grid-cols-11 gap-4 px-4 pb-4 w-full h-full">
-          <div className="col-span-4">
+        <div className="grid grid-cols-10 gap-4 px-4 pb-4 w-full h-full">
+          <div className="col-span-3">
             <div className="flex flex-col gap-4 h-full">
-              <div className="flex-1 w-full h-full">{/* <DataUsageChart /> */}</div>
-              <div className="flex-1 w-full h-full">{/* <BandwidthChart /> */}</div>
+              <div className="flex-1 w-full h-full">
+                <DataUsageChart />
+              </div>
+              <div className="flex-1 w-full h-full">
+                <BandwidthChart />
+              </div>
             </div>
           </div>
 
-          <div className="col-span-3">
+          <div className="col-span-4">
             <div className="flex h-full">
               <div className="flex-1 w-full h-full">
-                {/* <ServerByDC /> */}
-                <VietnamMap />
+                <ServerByDC />
+                {/* <VietnamMap /> */}
               </div>
               {/* <div className="flex-1 w-full h-full">
                 <AppByDC />
@@ -75,10 +78,14 @@ export default function ZDNPanel() {
             </div>
           </div>
 
-          <div className="col-span-4">
+          <div className="col-span-3">
             <div className="flex flex-col gap-4 h-full">
-              <div className="flex-1 w-full h-full">{/* <EdgeSeverStatistic /> */}</div>
-              <div className="flex-1 w-full h-full">{/* <EdgeSeverUsage /> */}</div>
+              <div className="flex-1 w-full h-full">
+                <EdgeSeverStatistic />
+              </div>
+              <div className="flex-1 w-full h-full">
+                <EdgeSeverUsage />
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,256 @@
+// import * as am5 from "@amcharts/amcharts5";
+// import * as am5hierarchy from "@amcharts/amcharts4/hierarchy";
+// import am5themes_Animated from "@amcharts/amcharts4/themes/Animated";
+// import am5themes_Responsive from "@amcharts/amcharts4/themes/Responsive";
+
+import * as am4core from "@amcharts/amcharts4/core";
+import * as am4charts from "@amcharts/amcharts4/charts";
+import * as am4plugins_forceDirected from "@amcharts/amcharts4/plugins/forceDirected";
+
+import { useEffect } from "react";
+// import * as am5plugins_forceDirected from "@amcharts/amcharts5/plugins/forceDirected";
+
+export interface ITreeNodeType {
+  value?: number;
+  name?: string;
+  children?: any[];
+}
+// export function generateLevel(data: ITreeNodeType, name: string, level: number, maxLevels: number, maxNodes: number, maxValue: number) {
+//   for (var i = 0; i < Math.ceil(maxNodes * Math.random()) + 1; i++) {
+//     let nodeName = name + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[i];
+//     let child: ITreeNodeType;
+//     if (level < maxLevels) {
+//       child = {
+//         name: nodeName + level,
+//         children: [],
+//       };
+
+//       if (level > 0 && Math.random() < 0.5) {
+//         child.value = Math.round(Math.random() * maxValue);
+//       } else {
+//         child.children = [];
+//         generateLevel(child, nodeName + i, level + 1, maxLevels, maxNodes, maxValue);
+//       }
+//     } else {
+//       child = {
+//         name: name + i,
+//         value: Math.round(Math.random() * maxValue),
+//         children: [],
+//       };
+//     }
+//     data.children?.push(child);
+//   }
+
+//   level++;
+//   return data;
+// }
+
+export const dataTree = {
+  name: "ZDN",
+  value: 0,
+  // x: am5.percent(50),
+  // y: am5.percent(50),
+  children: [
+    {
+      name: "Zing MP3",
+      value: 33,
+      // image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/ZingMP3logo.svg/2560px-ZingMP3logo.svg.png",
+      image: "../../public/zingmp3.svg",
+      children: [
+        { children: [], name: "Quang\nTrung", value: 1 },
+        { children: [], name: "FPTHN", value: 7 },
+        { children: [], name: "Zalo\nVNPTHN", value: 14 },
+        { children: [], name: "VNPTHN", value: 7 },
+        { children: [], name: "Zalo\nVNPTHCM", value: 28 },
+        { children: [], name: "FPTHCM", value: 17 },
+      ],
+    },
+    {
+      name: "Zalo",
+      value: 34,
+      image: "https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Zalo-Arc.png",
+      children: [
+        { children: [], name: "Viettel\nHCM", value: 10 },
+        { children: [], name: "Quang\nTrung", value: 12 },
+        { children: [], name: "FPTHN", value: 7 },
+        { children: [], name: "Zalo\nVNPTHN", value: 13 },
+        { children: [], name: "VNPTHN", value: 7 },
+        { children: [], name: "Zalo\nVNPTHCM", value: 24 },
+        { children: [], name: "FPTHCM", value: 25 },
+      ],
+    },
+    {
+      name: "Adtima",
+      value: 35,
+      image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-160/icon_firefox.svg",
+      children: [
+        { children: [], name: "Quang\nTrung", value: 1 },
+        { children: [], name: "FPTHN", value: 6 },
+        { children: [], name: "Zalo\nVNPTHN", value: 12 },
+        { children: [], name: "VNPTHN", value: 6 },
+        { children: [], name: "Zalo\nVNPTHCM", value: 18 },
+        { children: [], name: "FPTHCM", value: 15 },
+      ],
+    },
+    {
+      name: "CMS",
+      value: 48,
+      image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-160/icon_ie.svg",
+      children: [
+        { children: [], name: "Quang\nTrung", value: 3 },
+        { children: [], name: "Singapore\nOVH", value: 1 },
+        { children: [], name: "FPTHN", value: 9 },
+        { children: [], name: "Zalo\nVNPTHN", value: 11 },
+        { children: [], name: "Zalo\nVNPTHCM", value: 16 },
+        { children: [], name: "FPTHCM", value: 9 },
+      ],
+    },
+    {
+      name: "Báo Mới",
+      value: 31,
+      image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-160/icon_safari.svg",
+      children: [
+        { children: [], name: "Quang\nTrung", value: 1 },
+        { children: [], name: "FPTHN", value: 7 },
+        { children: [], name: "Zalo\nVNPTHN", value: 13 },
+        { children: [], name: "VNPTHN", value: 6 },
+        { children: [], name: "Zalo\nVNPTHCM", value: 23 },
+        { children: [], name: "FPTHCM", value: 19 },
+      ],
+    },
+    {
+      name: "Zing News",
+      value: 32,
+      image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-160/icon_opera.svg",
+      children: [
+        { children: [], name: "Singapore\nOVH", value: 2 },
+        { children: [], name: "Quang\nTrung", value: 4 },
+        { children: [], name: "FPTHN", value: 9 },
+        { children: [], name: "Zalo\nVNPTHN", value: 15 },
+        { children: [], name: "VNPTHN", value: 5 },
+        { children: [], name: "Zalo\nVNPTHCM", value: 23 },
+        { children: [], name: "FPTHCM", value: 19 },
+      ],
+    },
+  ],
+};
+
+export default function DirectedTree() {
+  // am5.useTheme(am5themes_Animated);
+  useEffect(() => {
+    let chart = am4core.create("DirectedTree", am4plugins_forceDirected.ForceDirectedTree);
+    let series = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries());
+    // series.data = [
+    //   {
+    //     name: "First",
+    //     children: [
+    //       {
+    //         name: "A1",
+    //         value: 100,
+    //       },
+    //       {
+    //         name: "A2",
+    //         value: 60,
+    //       },
+    //       {
+    //         name: "A3",
+    //         value: 30,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: "Second",
+    //     children: [
+    //       {
+    //         name: "B1",
+    //         value: 135,
+    //       },
+    //       {
+    //         name: "B2",
+    //         value: 98,
+    //       },
+    //       {
+    //         name: "B3",
+    //         value: 56,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: "Third",
+    //     children: [
+    //       {
+    //         name: "C1",
+    //         value: 335,
+    //       },
+    //       {
+    //         name: "C2",
+    //         value: 148,
+    //       },
+    //       {
+    //         name: "C3",
+    //         value: 126,
+    //       },
+    //       {
+    //         name: "C4",
+    //         value: 26,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: "Fourth",
+    //     children: [
+    //       {
+    //         name: "D1",
+    //         value: 415,
+    //       },
+    //       {
+    //         name: "D2",
+    //         value: 148,
+    //       },
+    //       {
+    //         name: "D3",
+    //         value: 89,
+    //       },
+    //       {
+    //         name: "D4",
+    //         value: 64,
+    //       },
+    //       {
+    //         name: "D5",
+    //         value: 16,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: "Fifth",
+    //     children: [
+    //       {
+    //         name: "E1",
+    //         value: 687,
+    //       },
+    //       {
+    //         name: "E2",
+    //         value: 148,
+    //       },
+    //     ],
+    //   },
+    // ];
+    series.data = dataTree;
+
+    // Set up data fields
+    series.dataFields.value = "value";
+    series.dataFields.name = "name";
+    series.dataFields.children = "children";
+
+    // Add labels
+    series.nodes.template.label.text = "{name}";
+    series.fontSize = 10;
+    series.minRadius = 15;
+    series.maxRadius = 40;
+
+    series.centerStrength = 0.5;
+    return () => chart.dispose();
+  }, []);
+
+  return <div id="DirectedTree" style={{ width: "100%", height: "100%" }}></div>;
+}

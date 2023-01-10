@@ -28,6 +28,7 @@ export default function StackedVerticalColumnChart({ dataChart }: { dataChart?: 
     customTheme.rule("Label").set("fontSize", 12);
     customTheme.rule("Label").set("fill", am5.color("#FFFFFF"));
     customTheme.rule("ColorSet").set("colors", [am5.color(0xef4444), am5.color(0x3b82f6)]);
+    customTheme.rule("Grid").setAll({ stroke: am5.color(0xffffff), strokeWidth: 1, strokeOpacity: 0.2 });
 
     root.setThemes([am5themes_Animated.new(root), customTheme, am5themes_Responsive.new(root)]);
 
@@ -69,13 +70,6 @@ export default function StackedVerticalColumnChart({ dataChart }: { dataChart?: 
         tooltip: am5.Tooltip.new(root, {}),
       }),
     );
-
-    let xRenderer = xAxis.get("renderer");
-    xRenderer.grid.template.setAll({
-      stroke: am5.color("#FFFFFF"),
-      strokeWidth: 1,
-      strokeOpacity: 0.2,
-    });
     xAxis.data.setAll(data);
     // *************** xAxis ***************
 
@@ -86,12 +80,6 @@ export default function StackedVerticalColumnChart({ dataChart }: { dataChart?: 
         renderer: am5xy.AxisRendererY.new(root, {}),
       }),
     );
-    let yRenderer = yAxis.get("renderer");
-    yRenderer.grid.template.setAll({
-      stroke: am5.color("#FFFFFF"),
-      strokeWidth: 1,
-      strokeOpacity: 0.2,
-    });
     // *************** yAxis ***************
 
     // Add series
@@ -99,9 +87,6 @@ export default function StackedVerticalColumnChart({ dataChart }: { dataChart?: 
     function makeSeries(name: string, fieldName: string, stacked: boolean) {
       let series = chart.series.push(
         am5xy.ColumnSeries.new(root, {
-          // cornerRadiusTL: 5,
-          // cornerRadiusTR: 5,
-
           stacked: stacked,
           name: name,
           xAxis: xAxis,

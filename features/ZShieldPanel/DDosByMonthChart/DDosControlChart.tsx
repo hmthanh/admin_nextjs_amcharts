@@ -26,7 +26,7 @@ export default function DDosControlChart() {
     // customTheme.rule("Label").set("fontSize", 14);
     customTheme.rule("Label").set("fill", am5.color("#FFF"));
     // customTheme.rule("fill").set
-    root.setThemes([am5themes_Animated.new(root), customTheme, am5themes_Responsive.new(root)]);
+    root.setThemes([am5themes_Animated.new(root), am5themes_Responsive.new(root), customTheme]);
 
     // Create chart
     // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
@@ -200,66 +200,165 @@ export default function DDosControlChart() {
         italy: 1,
         germany: 5,
         uk: 3,
+        "baomoi.com": 3,
+        "baonghean.vn": 3,
+        "giaoduc.net.vn": 9,
+        "nhandan.vn": 3,
+        "plo.vn": 3,
+        "thanhnien.vn": 3,
+        "tienphong.vn": 3,
+        "sggp.org.vn": 3,
+        "zingnews.vn": 3,
       },
       {
         year: "1934",
         italy: 1,
         germany: 2,
         uk: 6,
+        "baomoi.com": 6,
+        "baonghean.vn": 6,
+        "giaoduc.net.vn": 9,
+        "nhandan.vn": 6,
+        "plo.vn": 6,
+        "thanhnien.vn": 6,
+        "tienphong.vn": 9,
+        "sggp.org.vn": 6,
+        "zingnews.vn": 6,
       },
       {
         year: "1938",
         italy: 2,
         germany: 3,
         uk: 1,
+        "baomoi.com": 1,
+        "baonghean.vn": 1,
+        "giaoduc.net.vn": 4,
+        "nhandan.vn": 1,
+        "plo.vn": 1,
+        "thanhnien.vn": 1,
+        "tienphong.vn": 1,
+        "sggp.org.vn": 2,
+        "zingnews.vn": 8,
       },
       {
         year: "1950",
         italy: 3,
         germany: 4,
         uk: 1,
+        "baomoi.com": 1,
+        "baonghean.vn": 1,
+        "giaoduc.net.vn": 8,
+        "nhandan.vn": 1,
+        "plo.vn": 1,
+        "thanhnien.vn": 1,
+        "tienphong.vn": 1,
+        "sggp.org.vn": 11,
+        "zingnews.vn": 8,
       },
       {
         year: "1954",
         italy: 5,
         germany: 1,
         uk: 2,
+        "baomoi.com": 2,
+        "baonghean.vn": 2,
+        "giaoduc.net.vn": 7,
+        "nhandan.vn": 2,
+        "plo.vn": 2,
+        "thanhnien.vn": 2,
+        "tienphong.vn": 2,
+        "sggp.org.vn": 2,
+        "zingnews.vn": 2,
       },
       {
         year: "1958",
         italy: 3,
         germany: 2,
         uk: 1,
+        "baomoi.com": 1,
+        "baonghean.vn": 1,
+        "giaoduc.net.vn": 9,
+        "nhandan.vn": 1,
+        "plo.vn": 1,
+        "thanhnien.vn": 1,
+        "tienphong.vn": 1,
+        "sggp.org.vn": 10,
+        "zingnews.vn": 8,
       },
       {
         year: "1962",
         italy: 1,
         germany: 2,
         uk: 3,
+        "baomoi.com": 3,
+        "baonghean.vn": 3,
+        "giaoduc.net.vn": 1,
+        "nhandan.vn": 3,
+        "plo.vn": 3,
+        "thanhnien.vn": 3,
+        "tienphong.vn": 3,
+        "sggp.org.vn": 3,
+        "zingnews.vn": 3,
       },
       {
         year: "1966",
         italy: 2,
         germany: 1,
         uk: 5,
+        "baomoi.com": 5,
+        "baonghean.vn": 5,
+        "giaoduc.net.vn": 8,
+        "nhandan.vn": 5,
+        "plo.vn": 5,
+        "thanhnien.vn": 5,
+        "tienphong.vn": 9,
+        "sggp.org.vn": 5,
+        "zingnews.vn": 5,
       },
       {
         year: "1970",
         italy: 3,
         germany: 5,
         uk: 2,
+        "baomoi.com": 2,
+        "baonghean.vn": 2,
+        "giaoduc.net.vn": 9,
+        "nhandan.vn": 5,
+        "plo.vn": 2,
+        "thanhnien.vn": 2,
+        "tienphong.vn": 3,
+        "sggp.org.vn": 2,
+        "zingnews.vn": 2,
       },
       {
         year: "1974",
         italy: 4,
         germany: 3,
         uk: 6,
+        "baomoi.com": 6,
+        "baonghean.vn": 6,
+        "giaoduc.net.vn": 9,
+        "nhandan.vn": 6,
+        "plo.vn": 6,
+        "thanhnien.vn": 9,
+        "tienphong.vn": 6,
+        "sggp.org.vn": 7,
+        "zingnews.vn": 6,
       },
       {
         year: "1978",
         italy: 1,
         germany: 2,
         uk: 4,
+        "baomoi.com": 4,
+        "baonghean.vn": 8,
+        "giaoduc.net.vn": 9,
+        "nhandan.vn": 4,
+        "plo.vn": 4,
+        "thanhnien.vn": 4,
+        "tienphong.vn": 8,
+        "sggp.org.vn": 4,
+        "zingnews.vn": 4,
       },
     ];
 
@@ -286,7 +385,7 @@ export default function DDosControlChart() {
       am5xy.ValueAxis.new(root, {
         maxPrecision: 0,
         renderer: am5xy.AxisRendererY.new(root, {
-          inversed: true,
+          inversed: false,
         }),
       }),
     );
@@ -333,21 +432,37 @@ export default function DDosControlChart() {
       series.appear(1000);
     }
 
-    createSeries("Italy", "italy");
-    createSeries("Germany", "germany");
-    createSeries("UK", "uk");
+    // createSeries("Italy", "italy");
+    // createSeries("Germany", "germany");
+    // createSeries("UK", "uk");
 
-    var legend = chart.children.push(
+    createSeries("Baomoi", "baomoi.com");
+    createSeries("Baonghean", "baonghean.vn");
+    createSeries("Giaoduc", "giaoduc.net.vn");
+    createSeries("Nhandan", "nhandan.vn");
+    createSeries("Plo", "plo.vn");
+    createSeries("Thanh Nien", "thanhnien.vn");
+    createSeries("Tien Phong", "tienphong.vn");
+    createSeries("sggp", "sggp.org.vn");
+    createSeries("Zing News", "zingnews.vn");
+
+    var legend = root.container.children.push(
       am5.Legend.new(root, {
-        centerX: am5.p50,
-        x: am5.p50,
-        // layout: root.gridLayout
-        layout: am5.GridLayout.new(root, {
-          maxColumns: 3,
-          fixedWidthGrid: true,
-        }),
+        width: am5.percent(100),
+        // centerX: am5.p50,
+        // x: am5.p50,
+        // layout: root.grid
+        layout: root.gridLayout
+        // layout: am5.GridLayout.new(root, {
+        //   maxColumns: 5,
+        //   fixedWidthGrid: true,
+        // }),
       }),
     );
+    legend.labels.template.setAll({
+      fontSize: 16,
+      fontWeight: "300",
+    });
 
     // // Add legend
     // // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/

@@ -252,6 +252,19 @@ export default function StackBarChart() {
       }
     });
 
+    series.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        locationY: 0.5,
+        sprite: am5.Label.new(root, {
+          text: "{valueX}",
+          fill: root.interfaceColors.get("alternativeText"),
+          centerY: am5.percent(50),
+          centerX: am5.percent(50),
+          populateText: true
+        })
+      });
+    });
+
     series.appear();
     chart.appear(1000, 100);
 

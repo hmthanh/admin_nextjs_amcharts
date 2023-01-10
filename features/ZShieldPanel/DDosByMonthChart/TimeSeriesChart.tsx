@@ -72,7 +72,7 @@ export default function TimeSeriesChart() {
   const options = {
     elements: {
       point: {
-        radius: 2,
+        radius: 6,
       },
     },
     chartArea: {
@@ -213,7 +213,7 @@ export default function TimeSeriesChart() {
       data={{
         labels,
         datasets: [
-          { label: "baomo2i.com", data: [0, 0, 1, 11, 35, 29, 16, 18] },
+          { label: "baomoi.com", data: [0, 0, 1, 11, 35, 29, 16, 18] },
           { label: "baonghean.vn", data: [0, 4, 4, 7, 25, 14, 9, 5] },
           { label: "giaoduc.net.vn", data: [0, 2, 0, 3, 9, 7, 2, 2] },
           { label: "nhandan.vn", data: [0, 0, 0, 0, 7, 9, 5, 2] },

@@ -181,5 +181,5 @@ export const data = {
 };
 
 export function StackBarChart() {
-  return <Bar height={"100%"} width={"100%"} options={options} data={data} />;
+  return <Bar  options={options} data={data} />;
 }

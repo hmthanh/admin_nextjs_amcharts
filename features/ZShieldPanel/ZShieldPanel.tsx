@@ -44,10 +44,10 @@ export default function ZShieldPanel() {
       {/* <!-- Header --> */}
       {/* <GlobeMap /> */}
       {/* <!-- h-screen --> */}
-      <div className="grid grid-cols-9 gap-4 px-4 pb-4 w-full h-full">
+      <div className="grid grid-cols-9 gap-4 p-4 w-full h-full">
         {/* <!-- COL 1--> */}
-        <div className="col-span-3 ">
-          <div className="flex flex-col gap-4 h-full">
+        <div className="col-span-3">
+          <div className="grid grid-row gap-4 h-full">
             <div className="flex-1 w-full h-full">
               <DDosByMonthChart />
             </div>

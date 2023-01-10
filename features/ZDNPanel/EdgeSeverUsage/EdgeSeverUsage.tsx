@@ -8,6 +8,7 @@ const StackedVerticalColumnChart = dynamic(() => import("./StackedVerticalColumn
 export default function EdgeSeverUsage() {
   const [dataUsageChart, setDataUsageChart] = useState({});
 
+  
   useEffect(() => {}, []);
 
   return (

@@ -172,7 +172,7 @@ export default function DataUsageChart() {
       </div>
     );
   return (
-    <div className="p-6 box-container half-reponsive-panel">
+    <div className="p-3 box-container half-reponsive-panel">
       <TimeSeriesChart chartData={data} chartConfig={chartConfig} />
     </div>
   );

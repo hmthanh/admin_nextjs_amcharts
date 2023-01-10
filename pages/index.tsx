@@ -32,18 +32,18 @@ export default function Home() {
         >
           {/* <CarouselLeft /> */}
           <div className="carousel-inner relative w-full overflow-hidden">
-            {/* <div className="carousel-item active relative float-left w-full">
+            <div className="carousel-item active relative float-left w-full">
               <div className="block w-full h-screen">
                 <ZDNPanel />
               </div>
-            </div> */}
-            <div className="carousel-item active relative float-left w-full h-screen">
+            </div>
+            {/* <div className="carousel-item active relative float-left w-full h-screen">
               <div className="block w-full h-screen">
                 <div className="panel-full">
                   <ZShieldPanel />
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <div className="carousel-item float-left w-full h-screen">
               <div className="block w-full h-screen">
                 <div className="panel-full">

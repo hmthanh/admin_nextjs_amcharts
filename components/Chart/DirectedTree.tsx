@@ -137,7 +137,23 @@ export default function DirectedTree() {
     let root = am5.Root.new("DirectedTree");
     root._logo?.dispose();
 
-    root.setThemes([am5themes_Animated.new(root), am5themes_Responsive.new(root)]);
+    let customTheme = am5.Theme.new(root);
+    customTheme
+      .rule("ColorSet")
+      .set("colors", [
+        am5.color(0x374151),
+        // am5.color(0xef4444),
+        am5.color(0x22c55e),
+        am5.color(0x3b82f6),
+        am5.color(0xa855f7),
+        // am5.color(0xec4899),
+        am5.color(0xf43f5e),
+        am5.color(0xf97316),
+        // am5.color(0x06b6d4),
+        am5.color(0xd946ef),
+      ]);
+
+    root.setThemes([am5themes_Animated.new(root), am5themes_Responsive.new(root), customTheme]);
 
     // Create wrapper container
     let container = root.container.children.push(
@@ -185,6 +201,12 @@ export default function DirectedTree() {
     series.nodes.template.setAll({
       toggleKey: "none",
       cursorOverStyle: "default",
+    });
+    series.circles.template.setAll({
+      shadowColor: am5.Color.fromCSS("rgb(0 0 0 / 5%)"),
+      shadowBlur: 1,
+      shadowOffsetX: 1,
+      shadowOffsetY: 2
     });
     series.nodes.each((node: am5hierarchy.LinkedHierarchyNode) => {
       node.show();

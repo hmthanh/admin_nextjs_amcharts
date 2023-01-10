@@ -84,4 +84,8 @@
   .half-reponsive-panel {
     @apply h-full;
   }
+
+  .half-screen-panel{
+    @apply h-[50vh]
+  }
 }

@@ -1,11 +1,24 @@
 import * as am5 from "@amcharts/amcharts5";
 // import * as am5map from "@amcharts/amcharts5/map";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
-import am5themes_Responsive from '@amcharts/amcharts5/themes/Responsive';
+import am5themes_Responsive from "@amcharts/amcharts5/themes/Responsive";
 import * as am5xy from "@amcharts/amcharts5/xy";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
-export default function StackedVerticalColumnChart() {
+export default function StackedVerticalColumnChart({ dataChart }: { dataChart?: any }) {
+  const data = useMemo(
+    () => [
+      { cluster: "QTSC", Usage: 2.53, "Remain Capacity": 90 },
+      { cluster: "FPT-HCM", Usage: 107.4, "Remain Capacity": 240 },
+      { cluster: "ZALO VNPT-HCM", Usage: 157.68, "Remain Capacity": 300 },
+      { cluster: "VIETTEL-HCM", Usage: 16.32, "Remain Capacity": 100 },
+      { cluster: "VNPT-HN", Usage: 49.33, "Remain Capacity": 100 },
+      { cluster: "ZALO VNPT-HN", Usage: 112.01, "Remain Capacity": 160 },
+      { cluster: "FPT-HN", Usage: 56.04, "Remain Capacity": 80 },
+    ],
+    [],
+  );
+
   // am5.useTheme(am5themes_Animated);
   useEffect(() => {
     let root = am5.Root.new("StackedVerticalColumnChart");
@@ -14,6 +27,7 @@ export default function StackedVerticalColumnChart() {
     let customTheme = am5.Theme.new(root);
     customTheme.rule("Label").set("fontSize", 12);
     customTheme.rule("Label").set("fill", am5.color("#FFFFFF"));
+    customTheme.rule("ColorSet").set("colors", [am5.color(0xef4444), am5.color(0x3b82f6)]);
 
     root.setThemes([am5themes_Animated.new(root), customTheme, am5themes_Responsive.new(root)]);
 
@@ -25,8 +39,8 @@ export default function StackedVerticalColumnChart() {
         panY: false,
         wheelX: "panX",
         wheelY: "zoomX",
-        layout: root.verticalLayout
-      })
+        layout: root.verticalLayout,
+      }),
     );
 
     // Add legend
@@ -34,44 +48,15 @@ export default function StackedVerticalColumnChart() {
     let legend = chart.children.push(
       am5.Legend.new(root, {
         centerX: am5.p50,
-        x: am5.p50
-      })
+        x: am5.p50,
+      }),
     );
     legend.markers.template.setAll({
       width: 12,
-      height: 12
+      height: 12,
     });
-    // let data = [
-    //   {
-    //     year: "2021",
-    //     europe: 2.5,
-    //     namerica: 2.5,
-    //     asia: 2.1
-    //   },
-    //   {
-    //     year: "2022",
-    //     europe: 2.6,
-    //     namerica: 2.7,
-    //     asia: 2.2
-    //   },
-    //   {
-    //     year: "2023",
-    //     europe: 2.8,
-    //     namerica: 2.9,
-    //     asia: 2.4
-    //   }
-    // ];
 
-    let data = [
-      { cluster: "QTSC", Usage: 2.53, "Remain Capacity": 90 },
-      { cluster: "FPT-HCM", Usage: 107.4, "Remain Capacity": 240 },
-      { cluster: "ZALO VNPT-HCM", Usage: 157.68, "Remain Capacity": 300 },
-      { cluster: "VIETTEL-HCM", Usage: 16.32, "Remain Capacity": 100 },
-      { cluster: "VNPT-HN", Usage: 49.33, "Remain Capacity": 100 },
-      { cluster: "ZALO VNPT-HN", Usage: 112.01, "Remain Capacity": 160 },
-      { cluster: "FPT-HN", Usage: 56.04, "Remain Capacity": 80 }
-    ];
-
+    // *************** xAxis ***************
     // Create axes
     // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
     let xAxis = chart.xAxes.push(
@@ -79,45 +64,56 @@ export default function StackedVerticalColumnChart() {
         categoryField: "cluster",
         renderer: am5xy.AxisRendererX.new(root, {
           cellStartLocation: 0.1,
-          cellEndLocation: 0.9
+          cellEndLocation: 0.9,
         }),
-        tooltip: am5.Tooltip.new(root, {})
-      })
+        tooltip: am5.Tooltip.new(root, {}),
+      }),
     );
+
     let xRenderer = xAxis.get("renderer");
     xRenderer.grid.template.setAll({
       stroke: am5.color("#FFFFFF"),
       strokeWidth: 1,
-      strokeOpacity: 0.2
+      strokeOpacity: 0.2,
     });
     xAxis.data.setAll(data);
+    // *************** xAxis ***************
 
+    // *************** yAxis ***************
     let yAxis = chart.yAxes.push(
       am5xy.ValueAxis.new(root, {
         min: 0,
-        renderer: am5xy.AxisRendererY.new(root, {})
-      })
+        renderer: am5xy.AxisRendererY.new(root, {}),
+      }),
     );
     let yRenderer = yAxis.get("renderer");
     yRenderer.grid.template.setAll({
       stroke: am5.color("#FFFFFF"),
       strokeWidth: 1,
-      strokeOpacity: 0.2
+      strokeOpacity: 0.2,
     });
+    // *************** yAxis ***************
 
     // Add series
     // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
     function makeSeries(name: string, fieldName: string, stacked: boolean) {
       let series = chart.series.push(
         am5xy.ColumnSeries.new(root, {
+          // cornerRadiusTL: 5,
+          // cornerRadiusTR: 5,
+
           stacked: stacked,
           name: name,
           xAxis: xAxis,
           yAxis: yAxis,
           valueYField: fieldName,
-          categoryXField: "cluster"
-        })
+          categoryXField: "cluster",
+        }),
       );
+
+      series.columns.template.setAll({
+        // fill: am5.color(0xe4572e),
+      });
 
       // series.columns.template.setAll({
       //   tooltipText: "{name}, {categoryX}:{valueY}",
@@ -138,8 +134,8 @@ export default function StackedVerticalColumnChart() {
             fill: root.interfaceColors.get("alternativeText"),
             centerY: am5.percent(50),
             centerX: am5.percent(50),
-            populateText: true
-          })
+            populateText: true,
+          }),
         });
       });
 
@@ -148,12 +144,11 @@ export default function StackedVerticalColumnChart() {
 
     makeSeries("Usage", "Usage", false);
     makeSeries("Remain Capacity", "Remain Capacity", true);
-    // makeSeries("Asia", "asia", false);
 
     return () => {
       root.dispose();
     };
-  }, []);
+  }, [data]);
 
   return <div id="StackedVerticalColumnChart" style={{ width: "100%", height: "100%" }}></div>;
 }

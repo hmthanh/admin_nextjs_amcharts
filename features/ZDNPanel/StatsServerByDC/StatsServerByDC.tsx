@@ -38,7 +38,7 @@ export default function ServerByDC() {
   // }, []);
   if (error)
     return (
-      <div className="p-6 box-container half-reponsive-panel">
+      <div className="p-3 box-container half-reponsive-panel">
         <ErrorPanel />
       </div>
     );

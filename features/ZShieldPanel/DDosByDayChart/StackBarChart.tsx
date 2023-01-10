@@ -107,7 +107,7 @@ export const options = {
           drawOnChartArea: true,
           drawTicks: true,
           borderDash: [5, 5],
-          color: "#ff0000",
+          color: "#fff",
         },
         ticks: {
           display: false,

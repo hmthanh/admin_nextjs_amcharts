@@ -68,7 +68,7 @@ export default function DDosByMonthChart() {
   // ***************** OPTION **********************
 
   return (
-    <div className="p-6 box-container half-reponsive-panel">
+    <div className="p-6 box-container h-full">
       <TimeSeriesChart />
     </div>
   );

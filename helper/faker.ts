@@ -1,4 +1,4 @@
-import { ITreeNodeType } from "../components/Chart/DirectedTree.txxx";
+import { ITreeNodeType } from "../components/Chart/DirectedTree";
 import { IResponseType } from './IDataType';
 
 export const bandwidthData: IResponseType = {

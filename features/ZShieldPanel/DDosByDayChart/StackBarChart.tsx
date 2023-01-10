@@ -107,7 +107,7 @@ export const options = {
           drawOnChartArea: true,
           drawTicks: true,
           borderDash: [5, 5],
-          color: "rgb(255 255 255 / 0.2)",
+          color: "#ff0000",
         },
         ticks: {
           display: false,
@@ -125,7 +125,10 @@ export const options = {
         suggestedMin: 0,
         grid: {
           display: true,
-          color: "rgb(255 255 255 / 0.2)",
+          drawOnChartArea: true,
+          drawTicks: true,
+          borderDash: [5, 5],
+          color: "#ff0000",
         },
         ticks: {
           color: "white",
